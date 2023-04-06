@@ -1,0 +1,2 @@
+# otakoi_GourmetMap
+オタクのためのグルメマップ
