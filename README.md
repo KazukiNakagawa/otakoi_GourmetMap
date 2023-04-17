@@ -1,5 +1,3 @@
-[![Image from Gyazo](https://i.gyazo.com/e26c9df12ed916bc5ffdc4de7e7a7ebf.png)](https://gyazo.com/e26c9df12ed916bc5ffdc4de7e7a7ebf)
-
 # オタコイグルメマップ
 このサービスは、アニメ、マンガ、ゲーム、コスプレなど、様々なオタクジャンルを対象にしたグルメ検索サービスです。
 
