@@ -1,4 +1,4 @@
-<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2F99tJbtnNBT6yJ8bktlZOnW%2F%25E7%2594%25BB%25E9%259D%25A2%25E9%2581%25B7%25E7%25A7%25BB%25E5%259B%25B3%3Fnode-id%3D0%253A1%26t%3DG1SF2uhftg0iR9qC-1" allowfullscreen></iframe>
+<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2F99tJbtnNBT6yJ8bktlZOnW%2F%25E7%2594%25BB%25E9%259D%25A2%25E9%2581%25B7%25E7%25A7%25BB%25E5%259B%25B3%3Ftype%3Ddesign%26node-id%3D0%253A1%26t%3DoqViZ0OX6NoTlwkf-1" allowfullscreen></iframe>
 
 
 # オタコイグルメマップ
@@ -32,7 +32,7 @@
 ## 実装予定の機能
   - 利用中のユーザー
     - [x] ゲストユーザーログイン/ログアウト機能
-    - [x] 登録した店の自動レビューを実行することができる
+    - [x] 登録された店のレビューを実行する
     - [x] ゲストログイン機能
     - [x] パスワードリセット機能
     - [x] 店の記事投稿機能
@@ -46,8 +46,10 @@
     - [x] ユーザープロフィール編集機能
   - 管理ユーザー
     - [x] 管理ユーザーログイン/ログアウト機能
-    - [x] 利用検討中ユーザーの検索、一覧、詳細、編集
     - [x] 店データの一覧、詳細、作成、編集、削除
+    - [x] ゲストユーザーの検索、一覧、詳細、編集
+  - 未ログインユーザー
+    - [x] 店の記事閲覧機能
 
 
 
