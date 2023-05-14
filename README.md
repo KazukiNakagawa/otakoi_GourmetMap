@@ -1,6 +1,6 @@
 <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2F99tJbtnNBT6yJ8bktlZOnW%2F%25E7%2594%25BB%25E9%259D%25A2%25E9%2581%25B7%25E7%25A7%25BB%25E5%259B%25B3%3Ftype%3Ddesign%26node-id%3D0%253A1%26t%3DoqViZ0OX6NoTlwkf-1" allowfullscreen></iframe>
 
-[![Image from Gyazo](https://i.gyazo.com/ff33056806acf2f3f702bf338ce3fb7e.png)](https://gyazo.com/ff33056806acf2f3f702bf338ce3fb7e)
+[![Image from Gyazo](https://i.gyazo.com/0ff2e69dbf37c5a70b17f32e362f1015.png)](https://gyazo.com/0ff2e69dbf37c5a70b17f32e362f1015)
 
 
 # オタコイグルメマップ
