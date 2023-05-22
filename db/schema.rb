@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_05_17_023642) do
+ActiveRecord::Schema.define(version: 2023_05_22_053345) do
+
+  create_table "shops", force: :cascade do |t|
+    t.string "name"
+    t.text "explantory_text"
+    t.boolean "completed"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.text "scraped_data"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "name"
