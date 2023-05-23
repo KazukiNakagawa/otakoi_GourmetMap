@@ -13,6 +13,10 @@
  *= require_tree .
  *= require_self
  */
+body{
+  margin: 0;
+}
+
  .container{
     text-align: center;
   }
@@ -28,4 +32,31 @@
     border-radius: 3px;
     border: 2px solid #ddd;
   }
+
+  .header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: #f2f2f2;
+    color: #333;
+    font-size: 16px;
+  }
+  
+  .nav-menu {
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .nav-menu li {
+    margin-right: 10px; /* メニュー項目の間隔を調整してください */
+    display:  inline-block; 
+  }
+  
+  .nav-menu li:last-child {
+    margin-right: 0; /* 最後のメニュー項目の余白をリセット */
+  }
+  
  
