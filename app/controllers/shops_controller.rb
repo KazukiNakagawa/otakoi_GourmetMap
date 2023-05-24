@@ -38,9 +38,9 @@ class ShopsController < ApplicationController
     end
 
     def scrape
-      @task = Task.find(params[:id])
-      @task.scrape_website(params[:url])
-      redirect_to @task, notice: 'Website scraped successfully.'
+      @shop = Shop.find(params[:id])
+      @shop.scrape_website(params[:url])
+      redirect_to @shop, notice: 'Website scraped successfully.'
     end      
   
     private
