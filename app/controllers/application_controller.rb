@@ -9,7 +9,7 @@ class ApplicationController < ActionController::Base
 
     def already_login?
         unless current_user.nil?
-            redirect_to user_path, notice: "you are already login"
+            redirect_to user_path(current_user.id), notice: "you are already login"
         end
     end
 
