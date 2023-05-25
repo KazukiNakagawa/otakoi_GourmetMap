@@ -1,0 +1,5 @@
+<%= link_to 'Edit', edit_user_path(current_user) %>
+
+<%= form_for current_user, url: user_path(current_user), method: :patch do |f| %>
+  <!-- ユーザー情報の編集フォームのコード -->
+<% end %>

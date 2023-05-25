@@ -1,4 +1,7 @@
 <div class="profile-container">
+  <div class="profile-image">
+    <%#= image_tag @user.profile_image %>
+  </div>
   <div class="profile-details">
     <h1><%= current_user.name %></h1>
     <p>Email: <%= current_user.email %></p>
