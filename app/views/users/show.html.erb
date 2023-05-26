@@ -9,5 +9,7 @@
     <p>Hobby: <%= current_user.hobby %></p>
     <p>Profile: <%= current_user.profile %></p>
   </div>
+  
 </div>
+<%= link_to 'プロフィールページの編集', edit_user_path(current_user) %>
 
