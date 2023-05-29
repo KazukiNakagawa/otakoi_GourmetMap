@@ -5,6 +5,10 @@
   <div class="profile-details">
     <%= form_with model: @user, local: true do |f| %>
       <div class="field">
+        <%= f.label :name %>
+        <%= f.text_field :name %>
+      </div>
+      <div class="field">
         <%= f.label :email %>
         <%= f.text_field :email %>
       </div>
@@ -20,7 +24,12 @@
         <%= f.label :profile %>
         <%= f.text_field :profile %>
       </div>
-      <br>
+      <div class="field">
+        <%= f.label :avatar %>
+        <%= f.file_field :avatar, onchange: 'previewImage()', class: 'form-control' %>
+        <%= f.hidden_field :avatar_cache %><br>
+        <%= image_tag @user.avatar.url, class: 'rounded-circle mt-3', id: 'preview', size: '200x200' %>
+      </div>
       <div>
         <%= f.submit "save" %>
       </div>
