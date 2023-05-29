@@ -3,8 +3,8 @@ require 'nokogiri'
 
 class Shop < ApplicationRecord
   def scrape_website(url)
-    html = URI.open(url)
-    doc = Nokogiri::HTML(html)
+    agent = Mechanize.new
+    page = agent.get(url)
 
     # スクレイピング処理の実装
 

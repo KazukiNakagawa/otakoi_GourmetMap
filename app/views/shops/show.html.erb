@@ -1,10 +1,4 @@
-<%= form_with(model: @shop, url: scrape_task_path(@shop), method: :post) do |form| %>
-    <div class="field">
-      <%= form.label :url %>
-      <%= form.text_field :url %>
-    </div>
-    <div class="actions">
-      <%= form.submit 'Scrape' %>
-    </div>
+<%= form_with(model: @shop, url: scrape_shop_path(@shop), method: :post) do |form| %>
+  <%= form.text_field :url, placeholder: 'Enter website URL' %>
+  <%= form.submit 'Scrape' %>
 <% end %>
-  

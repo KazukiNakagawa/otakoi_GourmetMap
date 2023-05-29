@@ -3,17 +3,27 @@
     <%#= image_tag @user.profile_image %>
   </div>
   <div class="profile-details">
-    <h1><%= current_user.name %></h1>
-    <p>Email: <%= current_user.email %></p>
-    <p>Password: <%= current_user.password %></p>
-    <form action="<%= update_user_path(current_user) %>" method="post">
-      <label for="hobby">Hobby:</label>
-      <input type="text" id="hobby" name="hobby" value="<%= current_user.hobby %>">
+    <%= form_with model: @user, local: true do |f| %>
+      <div class="field">
+        <%= f.label :email %>
+        <%= f.text_field :email %>
+      </div>
+      <div class="field">
+        <%= f.label :password %>
+        <%= f.password_field :password %>
+      </div>
+      <div class="field">
+        <%= f.label :hobby %>
+        <%= f.text_field :hobby %>
+      </div>
+      <div class="field">
+        <%= f.label :profile %>
+        <%= f.text_field :profile %>
+      </div>
       <br>
-      <label for="profile">Profile:</label>
-      <textarea id="profile" name="profile"><%= current_user.profile %></textarea>
-      <br>
-      <input type="submit" value="Save">
-    </form>
+      <div>
+        <%= f.submit "save" %>
+      </div>
+    <% end %>
   </div>
 </div>

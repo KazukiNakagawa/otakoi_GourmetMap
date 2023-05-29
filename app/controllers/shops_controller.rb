@@ -41,7 +41,7 @@ class ShopsController < ApplicationController
       @shop = Shop.find(params[:id])
       @shop.scrape_website(params[:url])
       redirect_to @shop, notice: 'Website scraped successfully.'
-    end      
+    end   
   
     private
   

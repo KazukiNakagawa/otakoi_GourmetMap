@@ -29,7 +29,7 @@ class UsersController < ApplicationController
 
   def update
     @user = User.find(params[:id])
-    if user.update(post_params)
+    if @user.update(user_params)
       redirect_to request.referer
     else
       render :new

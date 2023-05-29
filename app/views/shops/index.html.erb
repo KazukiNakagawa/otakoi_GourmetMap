@@ -1,1 +1,20 @@
-<h2>shop_list<h2>
+<h1>Shop List</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <!-- 追加のカラムがあれば適宜追加 -->
+    </tr>
+  </thead>
+  <tbody>
+    <% @shops.each do |shop| %>
+      <tr>
+        <td><%= shop.name %></td>
+        <td><%= shop.description %></td>
+        <!-- 追加のカラムがあれば適宜追加 -->
+      </tr>
+    <% end %>
+  </tbody>
+</table>
