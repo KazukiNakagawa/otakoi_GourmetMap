@@ -39,4 +39,27 @@
     margin-left: auto;
     margin-right: auto;
   }
+
+  /* app/assets/stylesheets/application.css (or .scss) */
+.user-table {
+  width: 80%;
+  border-collapse: collapse;
+  margin: 0 auto;
+}
+
+.user-table th,
+.user-table td {
+  padding: 8px;
+  border: 1px solid #ccc;
+}
+
+.user-table th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+.user-table td {
+  text-align: center;
+}
+
   

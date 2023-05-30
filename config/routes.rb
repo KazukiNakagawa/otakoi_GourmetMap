@@ -8,10 +8,10 @@ Rails.application.routes.draw do
   post 'login', to: "sessions#create"
   delete 'logout', to: "sessions#destroy"
   resources :users, only: [:new, :create, :show, :edit, :update, :destroy] 
-  
-  resources :shops do
-    post 'scrape', on: :member
+  namespace :admin do
+    resources :users, only: [:index]
   end
-  get 'shops', to: 'shops#index'
+  
+  resources :shops, only: [:index]
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

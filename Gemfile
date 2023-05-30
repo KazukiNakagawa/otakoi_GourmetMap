@@ -35,6 +35,7 @@ group :development, :test do
   gem 'mechanize'
   gem 'carrierwave'
   gem 'mini_magick'
+  gem 'devise'
 end
 
 group :development do

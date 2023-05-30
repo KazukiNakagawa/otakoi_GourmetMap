@@ -4,16 +4,16 @@
   <thead>
     <tr>
       <th>Name</th>
-      <th>Description</th>
-      <!-- 追加のカラムがあれば適宜追加 -->
+      <th>Explantory Text</th>
+      <th>Completed</th>
     </tr>
   </thead>
   <tbody>
     <% @shops.each do |shop| %>
       <tr>
         <td><%= shop.name %></td>
-        <td><%= shop.description %></td>
-        <!-- 追加のカラムがあれば適宜追加 -->
+        <td><%= shop.explantory_text %></td>
+        <td><%= shop.completed %></td>
       </tr>
     <% end %>
   </tbody>

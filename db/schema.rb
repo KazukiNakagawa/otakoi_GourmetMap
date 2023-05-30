@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_05_24_095804) do
+ActiveRecord::Schema.define(version: 2023_05_29_102439) do
 
   create_table "shops", force: :cascade do |t|
     t.string "name"
@@ -32,6 +32,7 @@ ActiveRecord::Schema.define(version: 2023_05_24_095804) do
     t.string "avatar"
     t.string "avatar_cache"
     t.boolean "remove_avatar", default: false
+    t.boolean "admin", default: false
     t.index ["email"], name: "index_users_on_email", unique: true
   end
 
