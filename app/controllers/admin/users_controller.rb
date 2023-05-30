@@ -1,6 +1,10 @@
 class Admin::UsersController < ApplicationController
     def index
+      if params[:search].present?
+        @users = User.where("name LIKE ?", "%#{params[:search]}%")
+      else
         @users = User.all
+      end
     end
     
     private
