@@ -11,8 +11,14 @@
   </head>
 
   <body>
-  <%= render partial: 'shared/header_logged_in' if logged_in? %>
-  <%= render partial: 'shared/header_logged_out' unless logged_in? %>
+  <% if logged_in? && current_user&.admin? %>
+    <%= render partial: 'shared/header_admin' %>
+  <% elsif logged_in? %>
+    <%= render partial: 'shared/header_logged_in' %>
+  <% else %>
+    <%= render partial: 'shared/header_logged_out' %>
+  <% end %>
+  
   
     <%= notice %>
     <%= alert %>
