@@ -14,14 +14,14 @@ class SessionsController < ApplicationController
         redirect_to user_path(user.id)
       end
     else
-      flash.now[:alert] = "Email or Password is invalid"
+      flash.now[:alert] = "メールアドレスかパスワードが違います。"
       render :new
     end
   end
 
   def destroy
     session[:user_id] = nil
-    redirect_to root_path, notice: "you have successfully logout"
+    redirect_to root_path, notice: "ログアウトに成功しました。"
   end
 
 end

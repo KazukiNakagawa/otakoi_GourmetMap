@@ -1,9 +1,10 @@
 <!-- app/views/admin/users/index.html.erb -->
+
 <h1>ユーザー一覧</h1>
-    <%= form_tag admin_users_path, method: :get, class: 'user-search-form' do %>
-        <%= text_field_tag :search, params[:search], placeholder: 'ユーザー名を入力してください' %>
-        <%= submit_tag '検索' %>
-    <% end %>
+<%= form_tag admin_users_path, method: :get, class: 'user-search-form' do %>
+  <%= text_field_tag :search, params[:search], placeholder: 'ユーザー名を入力してください' %>
+  <%= submit_tag '検索' %>
+<% end %>
 <table class="user-table">
   <thead>
     <tr>
@@ -19,7 +20,7 @@
       <tr>
         <td><%= user.id %></td>
         <td><%= user.name %></td>
-        <td><%= user.email %></td>
+        <td><%= link_to user.email, user_path(id: user.id) %></td>
         <td><%= user.created_at %></td>
         <td><%= user.updated_at %></td>
       </tr>
