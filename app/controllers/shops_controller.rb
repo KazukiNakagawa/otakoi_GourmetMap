@@ -1,8 +1,12 @@
+require 'open-uri'
+require 'JSON'
+
 class ShopsController < ApplicationController
     before_action :set_shop, only: [:show, :edit, :update, :destroy]
   
     def index
       @shops = Shop.all
+      scrape_instagram("kazuki_na_0312")
     end
   
     def show
@@ -37,11 +41,17 @@ class ShopsController < ApplicationController
       redirect_to shops_path, notice: 'Shop was successfully destroyed.'
     end
 
-    def scrape
-      @shop = Shop.find(params[:id])
-      @shop.scrape_website(params[:url])
-      redirect_to @shop, notice: 'Website scraped successfully.'
-    end   
+    def scrape_instagram(user_id)
+      puts "test"
+      begin
+        byebug
+        instagram_source = open("https://www.instagram.com/#{user_id}").read
+        content = JSON.parse(instagram_source.split("window._sharedData = ")[1].split(";</script>")[0])
+        return content['entry_data']['ProfilePage'][0]['user']
+      rescue Exception => e
+        return nil
+      end
+    end  
   
     private
   
