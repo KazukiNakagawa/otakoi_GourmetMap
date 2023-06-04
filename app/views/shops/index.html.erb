@@ -1,20 +1,22 @@
-<h1>Shop List</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Explantory Text</th>
-      <th>Completed</th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @shops.each do |shop| %>
+
+<%= link_to '新規作成', new_shop_path %>
+<h1>Shop List</h1>
+  <table>
+    <thead>
       <tr>
-        <td><%= shop.name %></td>
-        <td><%= shop.explantory_text %></td>
-        <td><%= shop.completed %></td>
+        <th>Name</th>
+        <th>Explantory Text</th>
+        <th>Completed</th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
+    <tbody>
+      <% @shops.each do |shop| %>
+        <tr>
+          <td><%= shop.name %></td>
+          <td><%= shop.explantory_text %></td>
+          <td><%= shop.completed %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>

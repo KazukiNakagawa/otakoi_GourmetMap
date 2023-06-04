@@ -1,0 +1,17 @@
+<h1>新規お店作成</h1>
+
+<%= form_with(model: @shop, url: shops_path, local: true) do |form| %>
+  <div>
+    <%= form.label :name, "店名" %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div>
+    <%= form.label :explantory_text, "説明" %>
+    <%= form.text_area :explantory_text %>
+  </div>
+
+  <div>
+    <%= form.submit "作成" %>
+  </div>
+<% end %>

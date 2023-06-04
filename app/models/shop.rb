@@ -2,6 +2,9 @@ require 'open-uri'
 require 'json'
 
 class Shop < ApplicationRecord
+  validates :name, presence: true
+  validates :explantory_text, presence: true
+
   def scrape_website(url)
     agent = Mechanize.new
     page = agent.get(url)
