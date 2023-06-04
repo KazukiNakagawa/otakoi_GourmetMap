@@ -19,6 +19,8 @@ class ShopsController < ApplicationController
   
     def create
       @shop = Shop.new(shop_params)
+      @shop.image.attach(params[:shop][:image]) if params[:shop][:image]
+
       if @shop.save
         redirect_to shops_path, notice: '店の情報が登録されました'
       else
@@ -61,7 +63,7 @@ class ShopsController < ApplicationController
     end
   
     def shop_params
-      params.require(:shop).permit(:name, :explantory_text, :completed)
+      params.require(:shop).permit(:name, :explantory_text, :completed, :image)
     end
   end
   

@@ -12,6 +12,17 @@
   </div>
 
   <div>
+    <%= form.label :image, "イメージ" %>
+    <%= form.file_field :image %>
+    <%= image_tag @shop.image if @shop.image.attached? %>
+  </div>
+
+  <div>
+    <%= form.label :tags, "タグ" %>
+    <%= form.text_field :tag_list %>
+  </div>
+
+  <div>
     <%= form.submit "作成" %>
   </div>
 <% end %>

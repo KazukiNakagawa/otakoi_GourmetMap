@@ -4,6 +4,8 @@ require 'json'
 class Shop < ApplicationRecord
   validates :name, presence: true
   validates :explantory_text, presence: true
+  has_one_attached :image
+
 
   def scrape_website(url)
     agent = Mechanize.new
