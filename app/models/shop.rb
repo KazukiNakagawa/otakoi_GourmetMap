@@ -5,6 +5,8 @@ class Shop < ApplicationRecord
   validates :name, presence: true
   validates :explantory_text, presence: true
   has_one_attached :image
+  has_many :taggings
+  has_many :tags, through: :taggings
 
 
   def scrape_website(url)

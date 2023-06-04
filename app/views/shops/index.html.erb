@@ -8,6 +8,7 @@
         <th>Name</th>
         <th>Explantory Text</th>
         <th>Completed</th>
+        <th>Tag</th>
       </tr>
     </thead>
     <tbody>
@@ -16,7 +17,7 @@
           <td><%= shop.name %></td>
           <td><%= shop.explantory_text %></td>
           <td><%= shop.completed %></td>
-          
+          <td><%= shop.tags.pluck(:name).join(', ') %></td>
         </tr>
       <% end %>
     </tbody>
