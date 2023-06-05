@@ -1,3 +1,20 @@
 // Place all the styles related to the Shops controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+.shop-list{
+    width: 90%;
+    margin: 0 auto;
+}
+
+.shop-tile{
+    width: 25%;
+    margin: 0 20px 20px 0;
+    float: right;
+    border:solid 1px black;
+}
+
+
+.top_image img{
+    width: 60%;
+}
