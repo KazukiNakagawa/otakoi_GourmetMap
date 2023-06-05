@@ -8,3 +8,4 @@
 <% end %>
 <p>Tags: <%= @shop.tags.pluck(:name).join(', ') %></p>
 <%= link_to "編集", edit_shop_path(@shop) %>
+<%= link_to '削除', destroy_shop_path(@shop), method: :delete, data: { confirm: '本当に削除しますか？' } %>

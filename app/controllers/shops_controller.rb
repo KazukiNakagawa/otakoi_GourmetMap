@@ -47,6 +47,7 @@ class ShopsController < ApplicationController
     end
   
     def destroy
+      @shop = Shop.find(params[:id])
       @shop.destroy
       redirect_to shops_path, notice: '店の情報が削除されました。'
     end
