@@ -1,4 +1,10 @@
-<%= form_with(model: @shop, url: scrape_shop_path(@shop), method: :post) do |form| %>
-  <%= form.text_field :url, placeholder: 'Enter website URL' %>
-  <%= form.submit 'Scrape' %>
+<!-- app/views/shops/show.html.erb -->
+<h1><%= @shop.name %></h1>
+<p><%= @shop.explantory_text %></p>
+<% if @shop.image.attached? %>
+  <%= image_tag @shop.image %>
+<% else %>
+  <p>No image available</p>
 <% end %>
+<p>Tags: <%= @shop.tags.pluck(:name).join(', ') %></p>
+<%= link_to "編集", edit_shop_path(@shop) %>

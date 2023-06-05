@@ -34,11 +34,13 @@ class ShopsController < ApplicationController
     end
   
     def edit
+      @shop = Shop.find(params[:id])
     end
   
     def update
+      @shop = Shop.find(params[:id])
       if @shop.update(shop_params)
-        redirect_to shops_path, notice: 'Shop was successfully updated.'
+        redirect_to shops_path, notice: '店の情報が更新されました。'
       else
         render :edit
       end
@@ -46,7 +48,7 @@ class ShopsController < ApplicationController
   
     def destroy
       @shop.destroy
-      redirect_to shops_path, notice: 'Shop was successfully destroyed.'
+      redirect_to shops_path, notice: '店の情報が削除されました。'
     end
 
     #def scrape_instagram(user_id)
@@ -68,7 +70,7 @@ class ShopsController < ApplicationController
     end
   
     def shop_params
-      params.require(:shop).permit(:name, :explantory_text, :completed, :image)
+      params.require(:shop).permit(:name, :explantory_text, :completed, :image, tag_name: [])
     end
   end
   

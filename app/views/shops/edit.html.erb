@@ -1,0 +1,29 @@
+<%= form_with(model: @shop, url: shop_path(@shop), local: true) do |form| %>
+  <div>
+    <%= form.label :name, "店名" %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div>
+    <%= form.label :explantory_text, "説明" %>
+    <%= form.text_area :explantory_text %>
+  </div>
+
+  <div>
+    <%= form.label :image, "画像" %>
+    <%= form.file_field :image %>
+  </div>
+
+  <%= form.fields_for :tags do |tag_form| %>
+    <% @shop.tags.each do |tag| %>
+      <div>
+        <%= tag_form.label :name, "タグ" %>
+        <%= tag_form.text_field :name, value: tag.name %>
+      </div>
+    <% end %>
+  <% end %>
+
+  <div>
+    <%= form.submit "更新" %>
+  </div>
+<% end %>
