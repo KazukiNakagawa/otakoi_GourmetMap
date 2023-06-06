@@ -20,10 +20,10 @@ class ShopsController < ApplicationController
     def create
       @shop = Shop.new(shop_params)
       @shop.image.attach(params[:shop][:image]) if params[:shop][:image]
-      tag_names = params[:shop][:tag_names].split(",") 
+      tag_names = params[:shop][:tag_names].split(",")
       tag_names.each do |tag_name|
-        tag = Tag.find_or_create_by(name: tag_name.strip) 
-        @shop.tags << tag 
+        tag = Tag.find_or_create_by(name: tag_name.strip)
+        @shop.tags << tag
       end
 
       if @shop.save
@@ -71,7 +71,7 @@ class ShopsController < ApplicationController
     end
   
     def shop_params
-      params.require(:shop).permit(:name, :explantory_text, :completed, :image, tag_name: [])
+      params.require(:shop).permit(:name, :explantory_text, :completed, :image, tag_names: [])
     end
   end
   

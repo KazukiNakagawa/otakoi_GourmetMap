@@ -3,8 +3,8 @@
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
 .shop-list{
-    width: 90%;
-    margin: 0 auto;
+    width: 95%;
+    margin: 0 0 0 -50px;
 }
 
 .shop-tile{
@@ -16,5 +16,9 @@
 
 
 .top_image img{
+    width: 60%;
+}
+
+.shop-image img{
     width: 60%;
 }

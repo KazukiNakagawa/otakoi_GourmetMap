@@ -8,6 +8,18 @@ class Shop < ApplicationRecord
   has_many :taggings
   has_many :tags, through: :taggings
 
+# タグ名をカンマ区切りで受け取って関連付ける
+def tag_names=(names)
+  self.tags = names.split(",").map do |name|
+    Tag.find_or_create_by(name: name.strip)
+  end
+end
+  
+# タグ名をカンマ区切りの文字列として返す
+def tag_names
+  tags.pluck(:name).join(", ")
+end
+
 
   def scrape_website(url)
     agent = Mechanize.new

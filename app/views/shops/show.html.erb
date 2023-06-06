@@ -1,11 +1,21 @@
-<!-- app/views/shops/show.html.erb -->
 <h1><%= @shop.name %></h1>
-<p><%= @shop.explantory_text %></p>
-<% if @shop.image.attached? %>
-  <%= image_tag @shop.image %>
-<% else %>
-  <p>No image available</p>
-<% end %>
-<p>Tags: <%= @shop.tags.pluck(:name).join(', ') %></p>
+
 <%= link_to "編集", edit_shop_path(@shop) %>
 <%= link_to '削除', destroy_shop_path(@shop), method: :delete, data: { confirm: '本当に削除しますか？' } %>
+
+<div class="shop-details">
+  <div class="shop-image">
+    <% if @shop.image.attached? %>
+      <%= image_tag url_for(@shop.image) %>
+    <% end %>
+  </div>
+  <div class="shop-info">
+    <p><%= @shop.explantory_text %></p>
+    <div class="tags">
+      <%= @shop.tags.pluck(:name).join(', ') %>
+    </div>
+    <%= link_to "一覧に戻る", shops_path %>
+  </div>
+</div>
+
+
