@@ -10,7 +10,8 @@ class ShopsController < ApplicationController
     end
   
     def show
-      @shop = Shop.find(params[:id])
+      @shop = Shop.includes(:tags).find(params[:id])
+      @tags = @shop.tags
     end
   
     def new
@@ -21,10 +22,6 @@ class ShopsController < ApplicationController
       @shop = Shop.new(shop_params)
       @shop.image.attach(params[:shop][:image]) if params[:shop][:image]
       tag_names = params[:shop][:tag_names].split(",")
-      tag_names.each do |tag_name|
-        tag = Tag.find_or_create_by(name: tag_name.strip)
-        @shop.tags << tag
-      end
 
       if @shop.save
         redirect_to shops_path, notice: '店の情報が登録されました'
@@ -35,6 +32,7 @@ class ShopsController < ApplicationController
   
     def edit
       @shop = Shop.find(params[:id])
+      @tags = @shop.tags
     end
   
     def update

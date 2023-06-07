@@ -12,7 +12,9 @@
   <div class="shop-info">
     <p><%= @shop.explantory_text %></p>
     <div class="tags">
-      <%= @shop.tags.pluck(:name).join(', ') %>
+      <% @tags.each do |tag| %>
+        <span class="tag"><%= tag.name %></span>
+      <% end %>
     </div>
     <%= link_to "一覧に戻る", shops_path %>
   </div>
