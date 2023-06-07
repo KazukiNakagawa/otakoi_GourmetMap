@@ -7,6 +7,7 @@ class Shop < ApplicationRecord
   has_one_attached :image
   has_many :taggings
   has_many :tags, through: :taggings
+  belongs_to :user
 
 # タグ名をカンマ区切りで受け取って関連付ける
 def tag_names=(names)
