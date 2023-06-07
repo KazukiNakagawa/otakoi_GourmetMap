@@ -1,15 +1,7 @@
 <h1><%= @shop.name %></h1>
 
-<% if @user && @user.name.present? %>
-  <p>作成者: <%= @user.name %></p>
-<% else %>
-  <p>作成者: 名前未設定</p>
-<% end %>
-
-<% if current_user && (current_user == @shop.user || current_user.admin?) %>
-  <%= link_to '編集', edit_shop_path(@shop) %>
-  <%= link_to '削除', shop_path(@shop), method: :delete, data: { confirm: '本当に削除しますか？' } %>
-<% end %>
+<%= link_to '編集', edit_shop_path(@shop) %>
+<%= link_to '削除', shop_path(@shop), method: :delete, data: { confirm: '本当に削除しますか？' } %>
 
 <div class="shop-details">
   <div class="shop-image">

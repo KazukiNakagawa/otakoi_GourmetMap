@@ -11,7 +11,6 @@ class ShopsController < ApplicationController
   
     def show
       @shop = Shop.find(params[:id])
-      @user = @shop.user
     end
   
     def new
