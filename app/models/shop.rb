@@ -7,6 +7,7 @@ class Shop < ApplicationRecord
   has_one_attached :image
   has_many :taggings
   has_many :tags, through: :taggings
+  has_many :reviews
  
 
 # タグ名をカンマ区切りで受け取って関連付ける
@@ -44,4 +45,9 @@ end
       return nil
     end
   end
+
+  def reviews
+    Review.where(shop_id: id)
+  end
+
 end
