@@ -11,6 +11,8 @@
   </div>
   <div class="shop-info">
     <p><%= @shop.explantory_text %></p>
+    <p><%= @shop.address %></p>
+    <p><a href="<%= @shop.url %>"><%= @shop.url %></a></p>
     <div class="tags">
       <% @tags.each do |tag| %>
         <span class="tag"><%= tag.name %></span>

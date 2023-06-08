@@ -1,7 +1,7 @@
 <h1>新規お店作成</h1>
 
 <%= form_with(model: @shop, url: shops_path, local: true) do |form| %>
-  <div>
+  <div class="shop_input">
     <%= form.label :name, "店名" %>
     <%= form.text_field :name %>
   </div>
@@ -11,13 +11,23 @@
     <%= form.text_area :explantory_text %>
   </div>
 
-  <div>
+  <div class="shop_input">
+    <%= form.label :url, "店のURL" %>
+    <%= form.text_field :url %>
+  </div>
+
+  <div class="shop_input">
+    <%= form.label :address, "住所" %>
+    <%= form.text_field :address %>
+  </div>
+
+  <div class="shop_input">
     <%= form.label :image, "イメージ" %>
     <%= form.file_field :image %>
     <%= image_tag @shop.image if @shop.image.attached? %>
   </div>
 
-  <div>
+  <div class="shop_input">
     <%= form.label :tag_names, "タグ（カンマ区切り）" %>
     <%= form.text_field :tag_names, id: "tag_names_input", placeholder: "タグを入力してください" %>
   </div>

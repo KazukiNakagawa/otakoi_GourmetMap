@@ -1,5 +1,6 @@
+<h3>編集ページ<h3>
 <%= form_with(model: @shop, url: shop_path(@shop), local: true) do |form| %>
-  <div>
+  <div class="shop_input">
     <%= form.label :name, "店名" %>
     <%= form.text_field :name %>
   </div>
@@ -9,7 +10,17 @@
     <%= form.text_area :explantory_text %>
   </div>
 
-  <div>
+  <div class="shop_input">
+    <%= form.label :url, "店のURL" %>
+    <%= form.text_field :url %>
+  </div>
+
+  <div class="shop_input">
+    <%= form.label :address, "住所" %>
+    <%= form.text_field :address %>
+  </div>
+
+  <div class="shop_input">
     <%= form.label :image, "画像" %>
     <%= form.file_field :image %>
   </div>
