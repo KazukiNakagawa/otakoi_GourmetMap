@@ -1,6 +1,10 @@
 // Place all the styles related to the Shops controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+a{
+    text-decoration: none;
+    color: #000000;
+}
 
 .shop-list{
     width: 95%;
@@ -25,4 +29,34 @@
 
 .shop-image img{
     width: 60%;
+}
+
+.btn_list{
+    width: 30%;
+    margin: 0 auto;
+}
+
+.edit_btn{
+  border: 0;
+  border-radius: 5px;
+  background: #75777c;
+  color: #fff;
+  padding: 5px 16px;
+  width: 60px;
+  font-size: 16px;
+  float: left;
+  margin-left: 80px;
+  margin-bottom: 20px;
+}
+
+.del_btn{
+  border: 0;
+  border-radius: 5px;
+  background: #75777c;
+  color: #fff;
+  float: right;
+  padding: 5px 16px;
+  width: 60px;
+  font-size: 16px;
+  margin-right: 80px;
 }

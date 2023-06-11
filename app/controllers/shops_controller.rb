@@ -17,7 +17,6 @@ class ShopsController < ApplicationController
     def create
       @shop = Shop.new(shop_params)
       @shop.image.attach(params[:shop][:image]) if params[:shop][:image]
-      byebug
       tag_names = params[:shop][:tag_names].split(",")
 
       if @shop.save
@@ -59,7 +58,7 @@ class ShopsController < ApplicationController
     end
   
     def shop_params
-      params.require(:shop).permit(:name, :explantory_text, :completed, :image, :url, :address, tag_names: [])
+      params.require(:shop).permit(:name, :explantory_text, :completed, :image, :url, :address, :tag_names)
     end
   end
   

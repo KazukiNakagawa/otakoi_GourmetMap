@@ -5,7 +5,7 @@ class Shop < ApplicationRecord
   validates :name, presence: true
   validates :explantory_text, presence: true
   has_one_attached :image
-  has_many :taggings
+  has_many :taggings, dependent: :destroy
   has_many :tags, through: :taggings
   has_many :reviews
  
