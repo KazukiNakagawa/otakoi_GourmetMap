@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   resources :users, only: [:new, :create, :show, :edit, :update, :destroy] 
   namespace :admin do
     resources :users, only: [:index]
+    resources :shops
   end
   
   delete '/shops/:id', to: 'shops#destroy', as: 'destroy_shop'

@@ -60,3 +60,24 @@ a{
   font-size: 16px;
   margin-right: 80px;
 }
+
+.shop-table {
+    width: 80%;
+    border-collapse: collapse;
+    margin: 20px auto;
+  }
+  
+  .shop-table th,
+  .shop-table td {
+    padding: 8px;
+    border: 1px solid #ccc;
+  }
+  
+  .shop-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+  }
+  
+  .shop-table td {
+    text-align: center;
+  }
