@@ -50,6 +50,12 @@ class ShopsController < ApplicationController
       @shop = Shop.find(params[:id])
       @reviews = @shop.reviews
     end
+
+    def rate
+      @review = Review.find(params[:id])
+      @review.update(rating: params[:rating].to_i)
+      redirect_to @review.shop
+    end
   
     private
   

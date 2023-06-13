@@ -3,15 +3,7 @@
   <p><%= @shop.address %></p>
   <p><a href="<%= @shop.url %>"><%= @shop.url %></a></p>
   <%= render 'comments/form' %> <!-- コメントフォームを追加 -->
-</div>
-
-<div class="reviews">
-  <% @reviews.each do |review| %>
-    <div class="review">
-      <h3><%= review.title %></h3>
-      <p><%= review.content %></p>
-      <p>Rating: <%= review.rating %></p>
-    </div>
+  <% if @review %>
+    <%= render 'reviews/rating_form', review: @review %> <!-- 評価入力用のフォームを追加 -->
   <% end %>
-  
 </div>
