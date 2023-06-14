@@ -4,4 +4,5 @@ class User < ApplicationRecord
   has_many :shops, dependent: :destroy
   has_many :tags
   has_and_belongs_to_many :tags
+  has_many :comments, dependent: :destroy
 end

@@ -8,7 +8,7 @@ class Shop < ApplicationRecord
   has_many :taggings, dependent: :destroy
   has_many :tags, through: :taggings
   has_many :reviews
- 
+  has_many :comments, dependent: :destroy
 
 # タグ名をカンマ区切りで受け取って関連付ける
 def tag_names=(names)

@@ -3,6 +3,22 @@
   <p><%= @shop.address %></p>
   <p><a href="<%= @shop.url %>"><%= @shop.url %></a></p>
   <%= render 'comments/form' %> <!-- コメントフォームを追加 -->
+  <table>
+  <tbody>
+    <% @comments.each do |comment| %>
+    <tr>
+      <td><%= image_tag comment.user.get_profile_image,size: "20x20" %></td>
+      <td><%= comment.user.name %></td>
+      <td><%= comment.comment %></td>
+      <td>
+        <% if comment.user == current_user %>
+        <%= link_to "削除", shop_comment_path(comment.shop,comment), method: :delete, class: "btn btn-sm btn-danger p-0 p-1", style: "font-size: 8px;" %>
+        <% end %>
+      </td>
+    </tr>
+    <% end %>
+  </tbody>
+  </table>
   <% if @review %>
     <%= render 'reviews/rating_form', review: @review %> <!-- 評価入力用のフォームを追加 -->
   <% end %>

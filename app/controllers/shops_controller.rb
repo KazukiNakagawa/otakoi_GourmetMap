@@ -48,6 +48,7 @@ class ShopsController < ApplicationController
 
     def reviews
       @shop = Shop.find(params[:id])
+      @comments = @shop.comments
       @reviews = @shop.reviews
     end
 
