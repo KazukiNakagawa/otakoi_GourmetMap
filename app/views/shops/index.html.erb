@@ -2,6 +2,11 @@
 <h1>Shop List</h1>
 
 <div class="shop-list">
+  <%= form_tag shops_path, method: :get, class: 'shop-search-form' do %>
+    <%= text_field_tag :tag, params[:tag], placeholder: 'タグを入力してください' %>
+    <%= submit_tag '検索' %>
+  <% end %>
+
   <% @shops.each do |shop| %>
     <div class="shop-tile">
       <h2><%= shop.name %></h2>

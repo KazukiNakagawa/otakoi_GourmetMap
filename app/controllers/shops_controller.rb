@@ -2,7 +2,16 @@ class ShopsController < ApplicationController
     before_action :set_shop, only: [:show, :edit, :update, :destroy]
   
     def index
-      @shops = Shop.all
+      if params[:tag]
+        @tag = Tag.find_by(name: params[:tag])
+        if @tag
+          @shops = @tag.shops
+        else
+          @shops = []
+        end
+      else
+        @shops = Shop.all
+      end
     end
   
     def show
