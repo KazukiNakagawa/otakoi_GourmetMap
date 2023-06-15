@@ -43,7 +43,7 @@ class ShopsController < ApplicationController
     def update
       @shop = Shop.find(params[:id])
       if @shop.update(shop_params)
-        redirect_to shops_path, notice: '店の情報が更新されました。'
+        redirect_to @shop, notice: '店の情報が更新されました。'
       else
         render :edit
       end

@@ -1,5 +1,5 @@
 <h3>編集ページ<h3>
-<%= form_with(model: @shop, url: shop_path(@shop), local: true) do |form| %>
+<%= form_with(model: @shop, url: shop_path(@shop), method: :patch) do |form| %>
   <div class="shop_input">
     <%= form.label :name, "店名" %>
     <%= form.text_field :name %>
@@ -26,7 +26,7 @@
   </div>
 
   <%= form.fields_for :tags do |tag_form| %>
-    <% @shop.tags.each do |tag| %>
+    <% @tags.each do |tag| %>
       <div>
         <%= tag_form.label :name, "タグ" %>
         <%= tag_form.text_field :name, value: tag.name %>
