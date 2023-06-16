@@ -59,6 +59,7 @@ class ShopsController < ApplicationController
       @shop = Shop.find(params[:id])
       @comments = @shop.comments
       @reviews = @shop.reviews
+      @comment = Comment.new
     end
 
     def rate
