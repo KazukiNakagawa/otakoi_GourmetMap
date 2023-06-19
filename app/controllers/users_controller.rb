@@ -13,7 +13,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       session[:user_id] = @user.id
-      redirect_to user_path(@user), notice: "you have successfully sign in"
+      redirect_to user_path(@user), notice: "登録に成功しました。"
     else
       render :new
     end

@@ -3,9 +3,11 @@ class CommentsController < ApplicationController
       byebug
       @shop = Shop.find(params[:shop_id])
       @comment = @shop.comments.build(comment_params)
+      @comment.user = current_user
       if @comment.save
         redirect_to shops_path, notice: 'コメントが投稿されました。'
       else
+        byebug
         redirect_to shops_path, alert: 'コメントの投稿に失敗しました。'
       end
     end 
@@ -23,6 +25,6 @@ class CommentsController < ApplicationController
     private
 
     def comment_params
-      params.require(:comment).permit(:user_id, :shop_id)
+      params.require(:comment).permit(:content)
     end
 end
