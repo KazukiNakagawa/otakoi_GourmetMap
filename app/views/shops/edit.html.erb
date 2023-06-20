@@ -26,12 +26,10 @@
   </div>
 
   <%= form.fields_for :tags do |tag_form| %>
-    <% @tags.each do |tag| %>
-      <div>
-        <%= tag_form.label :name, "タグ" %>
-        <%= tag_form.text_field :name, value: tag.name %>
-      </div>
-    <% end %>
+    <div>
+      <%= tag_form.label :name, "タグ" %>
+      <%= tag_form.text_field :name %>
+    </div>
   <% end %>
 
   <div>

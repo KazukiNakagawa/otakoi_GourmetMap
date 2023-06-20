@@ -1,6 +1,5 @@
 class CommentsController < ApplicationController
     def create
-      byebug
       @shop = Shop.find(params[:shop_id])
       @comment = @shop.comments.build(comment_params)
       @comment.user = current_user

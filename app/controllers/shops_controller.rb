@@ -42,6 +42,9 @@ class ShopsController < ApplicationController
   
     def update
       @shop = Shop.find(params[:id])
+      logger.debug '++++++'
+      logger.debug params
+      logger.debug '++++++'
       if @shop.update(shop_params)
         redirect_to @shop, notice: '店の情報が更新されました。'
       else
@@ -75,7 +78,7 @@ class ShopsController < ApplicationController
     end
   
     def shop_params
-      params.require(:shop).permit(:name, :explantory_text, :completed, :image, :url, :address, :tag_names)
+      params.require(:shop).permit(:name, :explantory_text, :completed, :image, :url, :address, :tag_names, tags_attributes: [:id, :name])
     end
   end
   
