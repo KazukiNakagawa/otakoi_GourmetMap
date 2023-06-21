@@ -70,6 +70,12 @@ class ShopsController < ApplicationController
       @review.update(rating: params[:rating].to_i)
       redirect_to @review.shop
     end
+
+    def bookmark
+      @shop = Shop.find(params[:id])
+        current_user.bookmarks.create(shop: @shop)
+        redirect_to @shop
+    end
   
     private
   

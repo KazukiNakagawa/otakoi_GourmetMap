@@ -18,6 +18,7 @@ Rails.application.routes.draw do
   resources :shops, only: [:index, :new, :create, :show, :edit, :update, :destroy] do
     member do
       get 'reviews'
+      post 'bookmark'
     end
     resources :comments, only: [:create, :destroy]
   end

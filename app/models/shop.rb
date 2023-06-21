@@ -9,6 +9,8 @@ class Shop < ApplicationRecord
   has_many :tags, through: :taggings
   has_many :reviews
   has_many :comments, dependent: :destroy
+  has_many :bookmarks, dependent: :destroy
+  has_many :users, through: :bookmarks
   accepts_nested_attributes_for :tags, allow_destroy: true
 
 # タグ名をカンマ区切りで受け取って関連付ける

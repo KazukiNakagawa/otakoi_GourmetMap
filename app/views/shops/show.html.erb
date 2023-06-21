@@ -7,6 +7,9 @@
   <div class="del_btn">
     <%= link_to '削除', shop_path(@shop), method: :delete, data: { confirm: '本当に削除しますか？' } %>
   </div>
+  <div class="bookmark_btn">
+    <%= button_to 'ブックマークする', bookmark_shop_path(@shop), method: :post %>
+  </div>
 </div>
 
 <div class="shop-details">
