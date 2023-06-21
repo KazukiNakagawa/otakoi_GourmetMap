@@ -4,10 +4,10 @@ class CommentsController < ApplicationController
       @comment = @shop.comments.build(comment_params)
       @comment.user = current_user
       if @comment.save
-        redirect_to shops_path, notice: 'コメントが投稿されました。'
+        redirect_to @shop, notice: 'コメントが投稿されました。'
       else
         byebug
-        redirect_to shops_path, alert: 'コメントの投稿に失敗しました。'
+        redirect_to @shop, alert: 'コメントの投稿に失敗しました。'
       end
     end 
     
