@@ -1,6 +1,12 @@
 <h1>オタ恋グルメマップへようこそ！</h1>
 
-<%= image_tag("top_main.jpg", class: "top-image") %>
+<div class="main_image">
+  <%= image_tag("top_main.jpg", class: "top-image") %><br>
+  <%= image_tag("human.png", class: "human-image1") %>
+  <%= image_tag("couple.png", class: "human-image2") %>
+</div>
 
-<p><%= link_to "登録", new_user_path %></p>
-<p><%= link_to "ログイン", login_path %></p>
+<div class="index_link">
+  <p><%= link_to "登録", new_user_path %></p>
+  <p><%= link_to "ログイン", login_path %></p>
+</div>

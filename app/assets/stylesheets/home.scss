@@ -1,9 +1,31 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+.main_image{
+  width:50%;
+  margin: 0 auto;
+}
+
+
 .top-image {
-    border-radius: 50%;
-    width: 200px; /* 適切なサイズに変更してください */
-    height: 200px; /* 適切なサイズに変更してください */
-    object-fit: cover; /* 画像を切り取って表示するための設定 */
-  }
+  border-radius: 50%;
+  width: 200px; /* 適切なサイズに変更してください */
+  height: 200px; /* 適切なサイズに変更してください */
+  object-fit: cover; /* 画像を切り取って表示するための設定 */
+}
+
+.human-image1{
+  width: 100px;
+  height: 100px;
+  float: right;
+}
+
+.human-image2{
+  width: 120px;
+  height: 100px;
+  float: left;
+}
+
+.index_link{
+  clear:both;
+}
