@@ -19,6 +19,7 @@ Rails.application.routes.draw do
     member do
       get 'reviews'
       post 'bookmark'
+      delete :bookmark, as: :delete_bookmark
     end
     resources :comments, only: [:create, :destroy]
   end

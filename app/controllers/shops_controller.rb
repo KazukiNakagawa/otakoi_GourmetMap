@@ -73,8 +73,12 @@ class ShopsController < ApplicationController
 
     def bookmark
       @shop = Shop.find(params[:id])
+      if current_user.bookmarks.exists?(shop: @shop)
+        current_user.bookmarks.find_by(shop: @shop).destroy
+      else
         current_user.bookmarks.create(shop: @shop)
-        redirect_to @shop
+      end
+      redirect_to @shop
     end
   
     private
