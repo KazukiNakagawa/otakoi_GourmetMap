@@ -8,7 +8,15 @@
     <%= link_to '削除', shop_path(@shop), method: :delete, data: { confirm: '本当に削除しますか？' } %>
   </div>
   <div class="bookmark_btn">
-    <%= button_to 'ブックマークする', bookmark_shop_path(@shop), method: :post %>
+    <% if current_user.bookmarks.exists?(shop_id: @shop.id) %>
+      <%= link_to bookmark_shop_path(@shop), method: :delete, class: "bookmark-btn" do %>
+        <i class="fas fa-star bookmarked"></i>
+      <% end %>
+    <% else %>
+      <%= button_to bookmark_shop_path(@shop), method: :post, class: "bookmark-btn" do %>
+        <i class="far fa-star"></i>
+      <% end %>
+    <% end %>
   </div>
 </div>
 

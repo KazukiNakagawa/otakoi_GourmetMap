@@ -61,5 +61,19 @@ body{
   .nav-menu li:last-child {
     margin-right: 0; /* 最後のメニュー項目の余白をリセット */
   }
+
+  .bookmark-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .bookmark-btn i {
+    color: #ccc;
+  }
+  
+  .bookmark-btn i.bookmarked {
+    color: gold;
+  }
   
  
