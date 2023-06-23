@@ -33,6 +33,17 @@
           <% end %>
         <% end %>
       </div>
+      <div class="like-btn">
+        <% if current_user.likes.exists?(shop_id: shop.id) %>
+          <%= link_to create_like_shop_path(shop), method: :post, class: "like-link" do %>
+            <i class="far fa-heart"></i> いいね
+          <% end %>
+        <% else %>
+          <%= link_to '#', class: 'unlike-link', data: { shop_id: shop.id } do %>
+            <i class="fas fa-heart liked"></i> いいね解除
+          <% end %>
+        <% end %>
+      </div>
     </div>
   <% end %>
 </div>
