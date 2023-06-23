@@ -78,7 +78,7 @@ class ShopsController < ApplicationController
       else
         current_user.bookmarks.create(shop: @shop)
       end
-      redirect_to @shop
+      redirect_back fallback_location: root_path
     end
   
     private

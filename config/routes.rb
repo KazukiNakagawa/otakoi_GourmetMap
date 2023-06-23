@@ -21,6 +21,8 @@ Rails.application.routes.draw do
       get 'reviews'
       post 'bookmark'
       delete :bookmark, as: :delete_bookmark
+      post 'like', to: 'likes#create', as: :create_like
+      delete 'like', to: 'likes#destroy', as: :delete_like
     end
     resources :comments, only: [:create, :destroy]
     resources :likes, only: [:create, :destroy]
