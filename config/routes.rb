@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   
   delete '/shops/:id', to: 'shops#destroy', as: 'destroy_shop'
   patch '/reviews/:id/rate' => 'reviews#rate', as: :rate_review
+  resources :bookmarks, only: [:index]
   resources :shops, only: [:index, :new, :create, :show, :edit, :update, :destroy] do
     member do
       get 'reviews'
