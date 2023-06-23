@@ -22,6 +22,17 @@
         <%= shop.tags.pluck(:name).join(', ') %>
       </div>
       <%= link_to "詳細", shop_path(shop) %>
+      <div class="bookmark_btn">
+        <% if current_user.bookmarks.exists?(shop_id: shop.id) %>
+          <%= link_to delete_bookmark_shop_path(shop), method: :delete, class: "bookmark-btn" do %>
+            <i class="fas fa-star bookmarked"></i>
+          <% end %>
+        <% else %>
+          <%= link_to bookmark_shop_path(shop), method: :post, class: "bookmark-btn" do %>
+            <i class="far fa-star"></i>
+          <% end %>
+        <% end %>
+      </div>
     </div>
   <% end %>
 </div>
