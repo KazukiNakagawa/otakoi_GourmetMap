@@ -3,10 +3,10 @@ class CommentsController < ApplicationController
       @shop = Shop.find(params[:shop_id])
       @comment = @shop.comments.build(comment_params)
       @comment.user = current_user
+      @comment.rate = params[:comment][:rate]
       if @comment.save
         redirect_to @shop, notice: 'コメントが投稿されました。'
       else
-        byebug
         redirect_to @shop, alert: 'コメントの投稿に失敗しました。'
       end
     end 
