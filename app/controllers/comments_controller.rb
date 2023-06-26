@@ -4,10 +4,13 @@ class CommentsController < ApplicationController
       @comment = @shop.comments.build(comment_params)
       @comment.user = current_user
       @comment.rate = params[:comment][:rate]
+
       if @comment.save
-        redirect_to @shop, notice: 'コメントが投稿されました。'
+        flash[:notice] = 'コメントが投稿されました。'
+        redirect_to @shop
       else
-        redirect_to @shop, alert: 'コメントの投稿に失敗しました。'
+        flash[:alert] = @comment.errors.full_messages.join(', ')
+        redirect_to @shop
       end
     end 
     
@@ -18,6 +21,7 @@ class CommentsController < ApplicationController
     
     def destroy
       Comment.find(params[:id]).destroy
+      flash[:notice] = 'コメントが削除されました。'
       redirect_to shop_path(params[:shop_id])
     end
 

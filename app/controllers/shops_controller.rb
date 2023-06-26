@@ -5,12 +5,12 @@ class ShopsController < ApplicationController
       if params[:tag]
         @tag = Tag.find_by(name: params[:tag])
         if @tag
-          @shops = @tag.shops
+          @shops = @tag.shops.left_joins(:comments).group(:id).order(Arel.sql('AVG(comments.rate) DESC'))
         else
           @shops = []
         end
       else
-        @shops = Shop.all
+        @shops = Shop.left_joins(:comments).group(:id).order(Arel.sql('AVG(comments.rate) DESC'))
       end
     end
   

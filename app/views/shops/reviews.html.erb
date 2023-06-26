@@ -12,15 +12,17 @@
       <td><%= comment.content %></td>
       <td>
         <% if comment.rate.present? %>
-          <% full_stars = comment.rate.floor %>
-          <% half_star = (comment.rate - full_stars) >= 0.5 %>
-          
-          <% full_stars.times do %>
-            <%= image_tag("star-on.png", class: "star-icon") %>
+          <% rating = comment.rate.floor %>
+          <% half_star = (comment.rate - rating) >= 0.5 %>
+          <% empty_star = 5 - rating - (half_star ? 1 : 0) %>
+          <% rating.times do %>
+            <%= image_tag("star-on.png", class: "star") %>
           <% end %>
-          
           <% if half_star %>
-            <%= image_tag("star-half.png", class: "star-half-icon") %>
+            <%= image_tag("star-half.png", class: "star") %>
+          <% end %>
+          <% empty_star.times do %>
+            <%= image_tag("star-off.png", class: "star") %>
           <% end %>
         <% end %>
       </td>
