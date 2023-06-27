@@ -17,7 +17,16 @@
           <p>No image available</p>
         <% end %>
       </div>
-      <p><%= shop.explantory_text %></p>
+      <% text = shop.explantory_text %>
+      <% limit = 30 %>
+  
+      <% if text.length > limit %>
+        <% truncated_text = text[0...limit] + "..." %>
+      <% else %>
+        <% truncated_text = text %>
+      <% end %>
+  
+      <p class="list_text"><%= truncated_text %></p>
       <div class="tags">
         <%= shop.tags.pluck(:name).join(', ') %>
       </div>
