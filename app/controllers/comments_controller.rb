@@ -9,7 +9,7 @@ class CommentsController < ApplicationController
         flash[:notice] = 'コメントが投稿されました。'
         redirect_to @shop
       else
-        flash[:alert] = @comment.errors.full_messages.join(', ')
+        flash[:alert] = @comment.errors.full_messages.map { |msg| msg.gsub(/Content|Rate/, '') }.join(', ')
         redirect_to @shop
       end
     end 
@@ -17,6 +17,19 @@ class CommentsController < ApplicationController
     def new
       @shop = Shop.find(params[:shop_id])
       @comment = @shop.comments.build
+    end
+
+    def edit
+      @comment = Comment.find(params[:id])
+    end
+  
+    def update
+      @comment = Comment.find(params[:id])
+      if @comment.update(comment_params)
+        redirect_to shop_path(@comment.shop), notice: 'コメントが更新されました。'
+      else
+        render :edit
+      end
     end
     
     def destroy
@@ -28,6 +41,6 @@ class CommentsController < ApplicationController
     private
 
     def comment_params
-      params.require(:comment).permit(:content)
+      params.require(:comment).permit(:content, :rate)
     end
 end
