@@ -1,12 +1,14 @@
 <h1><%= @shop.name %></h1>
 
 <div class="btn_list">
-  <div class="edit_btn">
-    <%= link_to '編集', edit_shop_path(@shop) %>
-  </div>
-  <div class="del_btn">
-    <%= link_to '削除', shop_path(@shop), method: :delete, data: { confirm: '本当に削除しますか？' } %>
-  </div>
+  <% if current_user && current_user == @shop.user %>
+    <div class="edit_btn">
+      <%= link_to '編集', edit_shop_path(@shop) %>
+    </div>
+    <div class="del_btn">
+      <%= link_to '削除', shop_path(@shop), method: :delete, data: { confirm: '本当に削除しますか？' } %>
+    </div>
+  <% end %>
   <div class="bookmark_btn">
     <% if current_user.bookmarks.exists?(shop_id: @shop.id) %>
       <%= link_to delete_bookmark_shop_path(@shop), method: :delete, class: "bookmark-btn" do %>

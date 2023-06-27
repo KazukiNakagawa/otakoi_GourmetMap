@@ -4,6 +4,7 @@ require 'json'
 class Shop < ApplicationRecord
   validates :name, presence: true
   validates :explantory_text, presence: true
+  belongs_to :user
   has_one_attached :image
   has_many :taggings, dependent: :destroy
   has_many :tags, through: :taggings

@@ -25,6 +25,7 @@ class ShopsController < ApplicationController
   
     def create
       @shop = Shop.new(shop_params)
+      @shop.user = current_user
       @shop.image.attach(params[:shop][:image]) if params[:shop][:image]
       tag_names = params[:shop][:tag_names].split(",")
 

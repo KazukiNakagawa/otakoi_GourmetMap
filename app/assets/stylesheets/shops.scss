@@ -25,10 +25,14 @@ a{
 
 .top_image img{
     width: 60%;
+    height: 109px;
+    object-fit: cover; 
 }
 
 .shop-image img{
-    width: 60%;
+    width: 50%;
+    height: 50%;
+    object-fit: cover; 
 }
 
 .shop_text{
