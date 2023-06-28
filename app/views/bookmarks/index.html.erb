@@ -4,20 +4,31 @@
     <%= submit_tag '検索' %>
 <% end %>
 
-<% @bookmarked_shops.each do |shop| %>
-  <div class="shop-tile">
-    <h2><%= shop.name %></h2>
-    <div class="top_image">
-      <% if shop.image.attached? %>
-        <%= image_tag shop.image %>
+<div class="shop-list">
+  <% @bookmarked_shops.each do |shop| %>
+    <div class="shop-tile">
+      <h2><%= shop.name %></h2>
+      <div class="top_image">
+        <% if shop.image.attached? %>
+          <%= image_tag shop.image %>
+        <% else %>
+          <p>No image available</p>
+        <% end %>
+      </div>
+      <% text = shop.explantory_text %>
+      <% limit = 30 %>
+
+      <% if text.length > limit %>
+        <% truncated_text = text[0...limit] + "..." %>
       <% else %>
-        <p>No image available</p>
+        <% truncated_text = text %>
       <% end %>
+
+      <p class="list_text"><%= truncated_text %></p>
+      <div class="tags">
+        <%= shop.tags.pluck(:name).join(', ') %>
+      </div>
+      <%= link_to "詳細", shop_path(shop) %>
     </div>
-    <p><%= shop.explantory_text %></p>
-    <div class="tags">
-      <%= shop.tags.pluck(:name).join(', ') %>
-    </div>
-    <%= link_to "詳細", shop_path(shop) %>
-  </div>
-<% end %>
+  <% end %>
+</div>

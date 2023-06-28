@@ -39,4 +39,5 @@
   <% if @review %>
     <%= render 'reviews/rating_form', review: @review %> <!-- 評価入力用のフォームを追加 -->
   <% end %>
+  <%= link_to "詳細ページに戻る", shop_path(@shop) %>
 </div>
