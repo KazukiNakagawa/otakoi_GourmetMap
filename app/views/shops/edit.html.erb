@@ -29,8 +29,12 @@
     <div>
       <%= tag_form.label :name, "タグ" %>
       <%= tag_form.text_field :name %>
+      <%= tag_form.check_box :_destroy %>
+      <%= tag_form.label :_destroy, "削除" %>
     </div>
   <% end %>
+  
+
 
   <div>
     <%= form.submit "更新" %>

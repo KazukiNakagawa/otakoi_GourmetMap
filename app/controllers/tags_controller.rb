@@ -3,6 +3,12 @@ class TagsController < ApplicationController
       @tag = Tag.find_or_create_by(tag_params)
       redirect_to @tag
     end
+
+    def destroy
+      @tag = Tag.find(params[:id])
+      @tag.destroy
+      redirect_to @shop
+    end
   
     private
   
