@@ -37,15 +37,13 @@ class ShopsController < ApplicationController
     end
   
     def edit
-      @shop = Shop.find(params[:id])
+      @shop = Shop.includes(:tags).find(params[:id])
       @tags = @shop.tags
+      @shop.tags.build # 新しいタグのフォーム用
     end
   
     def update
       @shop = Shop.find(params[:id])
-      logger.debug '++++++'
-      logger.debug params
-      logger.debug '++++++'
       if @shop.update(shop_params)
         redirect_to @shop, notice: '店の情報が更新されました。'
       else
