@@ -1,0 +1,6 @@
+<%= form_tag rate_review_path(review.id), method: :patch, remote: true, class: "rating-form" do %>
+    <% (1..5).each do |rating| %>
+      <%= radio_button_tag :rating, rating, review.rating == rating, class: "star" %>
+    <% end %>
+<% end %>
+  

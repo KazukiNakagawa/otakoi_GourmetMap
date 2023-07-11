@@ -1,0 +1,25 @@
+// Place all the styles related to the Admin::Users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+.user-search-form {
+    /* フォーム全体のスタイル */
+    /* 例: 背景色を灰色にする */
+    padding: 10px;
+    float: right;
+    
+    /* テキストフィールドのスタイル */
+    input[type="text"] {
+      /* 例: 幅を200pxにする */
+      width: 300px;
+      /* その他のスタイルを追加 */
+    }
+    
+    /* 検索ボタンのスタイル */
+    input[type="submit"] {
+      /* 例: 背景色を青色にする */
+      background-color: blue;
+      width: 100px;
+      color: white;
+      /* その他のスタイルを追加 */
+    }
+  }

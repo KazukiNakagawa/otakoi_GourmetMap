@@ -1,0 +1,19 @@
+<h1>オタ恋グルメマップへようこそ！</h1>
+<p class="home_text">
+  ここではでデートスポットを探すの悩む人、またどのような店が探せばいいのわからない人のためのWebサービスです。<br>
+  1回目というタグが記入されているお店は出会から始める人にオススメの店を紹介し、2回目では本格にお付き合いを考えている人用、
+  3回目では正式にカップルとなる人のためのお店を紹介しています。<br>
+  1回目ではカフェ、2回目はレストラン、3回目は居酒屋などジャンルごとに分けています。<br>
+  オタクの人でも楽しめるオシャレなお店を紹介しています。
+</p>
+
+<div class="main_image">
+  <%= image_tag("top_main.jpg", class: "top-image") %><br>
+  <%= image_tag("human.png", class: "human-image1") %>
+  <%= image_tag("couple.png", class: "human-image2") %>
+</div>
+
+<div class="index_link">
+  <p><%= link_to "登録", new_user_path %></p>
+  <p><%= link_to "ログイン", login_path %></p>
+</div>
