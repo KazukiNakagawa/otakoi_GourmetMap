@@ -12,7 +12,7 @@
       <h2><%= shop.name %></h2>
       <div class="top_image">
         <% if shop.image.attached? %>
-          <%= image_tag shop.image %>
+          <%= image_tag url_for(shop.image) %>
         <% else %>
           <p>No image available</p>
         <% end %>
