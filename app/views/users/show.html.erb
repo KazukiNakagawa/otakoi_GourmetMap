@@ -1,0 +1,18 @@
+<div class="profile-container">
+  <div class="profile-image">
+    <%#= image_tag @user.profile_image %>
+  </div>
+  <div class="profile-details">
+    <h1><%= current_user.name %></h1>
+    <p>Email: <%= current_user.email %></p>
+    <p>Password: <%= current_user.password %></p>
+    <p>Hobby: <%= current_user.hobby %></p>
+    <p>Profile: <%= current_user.profile %></p>
+    <div class="profile-image">
+      <%= image_tag current_user.avatar.url, class: 'rounded-circle', size: '150x150' %>
+    </div>
+  </div>
+  
+</div>
+<%= link_to 'プロフィールページの編集', edit_user_path(current_user) %>
+

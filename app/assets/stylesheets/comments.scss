@@ -1,0 +1,24 @@
+// Place all the styles related to the comments controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+.comment_list{
+    width:50%;
+    margin: 0 auto;
+}
+
+.star-icon {
+    width: 16px; /* 星のアイコンの幅を調整 */
+    height: 16px; /* 星のアイコンの高さを調整 */
+    background-image: url('star-on.png'); /* 通常の星のアイコンの画像ファイル */
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+  
+.star-half-icon {
+    width: 16px; /* 星のアイコンの幅を調整 */
+    height: 16px; /* 星のアイコンの高さを調整 */
+    background-image: url('star-half.png'); /* 半分の星のアイコンの画像ファイル */
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+  

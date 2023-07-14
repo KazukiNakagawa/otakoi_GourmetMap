@@ -1,16 +1,30 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>OtakoiGourmetmap</title>
+    <title>オタ恋グルメマップ</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
   </head>
 
   <body>
-    <%= yield %>
+  <% if logged_in? && current_user&.admin? %>
+    <%= render partial: 'shared/header_admin' %>
+  <% elsif logged_in? %>
+    <%= render partial: 'shared/header_logged_in' %>
+  <% else %>
+    <%= render partial: 'shared/header_logged_out' %>
+  <% end %>
+  
+  
+    <%= notice %>
+    <%= alert %>
+    <div class="container">
+      <%= yield %>
+    </div>
   </body>
 </html>

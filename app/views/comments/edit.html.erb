@@ -1,0 +1,12 @@
+<%= form_with(model: @comment, url: shop_comment_path(@comment.shop, @comment), method: :patch) do |form| %>
+    <div class="form-group">
+      <%= form.label :content, "コメント" %>
+      <%= form.text_area :content, class: "form-control" %>
+    </div>
+    <div class="form-group">
+      <%= form.label :rate, "評価" %>
+      <%= form.number_field :rate, min: 1, max: 5, step: 0.5, class: "form-control" %>
+    </div>
+    <%= form.submit "更新", class: "btn btn-primary" %>
+<% end %>
+  

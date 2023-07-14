@@ -13,3 +13,67 @@
  *= require_tree .
  *= require_self
  */
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
+body{
+  margin: 0;
+}
+
+ .container{
+    text-align: center;
+  }
+ 
+  .field{
+    margin: 20px 0 20px;
+  }
+ 
+  input{
+    width: 400px;
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 3px;
+    border: 2px solid #ddd;
+  }
+
+  .header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: #f2f2f2;
+    color: #333;
+    font-size: 16px;
+  }
+  
+  .nav-menu {
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .nav-menu li {
+    margin-right: 10px; /* メニュー項目の間隔を調整してください */
+    display:  inline-block; 
+  }
+  
+  .nav-menu li:last-child {
+    margin-right: 0; /* 最後のメニュー項目の余白をリセット */
+  }
+
+  .bookmark-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .bookmark-btn i {
+    color: #ccc;
+  }
+  
+  .bookmark-btn i.bookmarked {
+    color: gold;
+  }
+  
+ 
