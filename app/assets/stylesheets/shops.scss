@@ -18,11 +18,7 @@ a{
     border:solid 1px black;
 }
 
-.shop_input{
-    margin-bottom: 20px;
-}
-
-
+//詳細ページ
 .top_image img{
     width: 60%;
     height: 109px;
@@ -76,33 +72,71 @@ a{
   margin-right: 80px;
 }
 
+//管理ページの店一覧
 .shop-table {
-    width: 80%;
-    border-collapse: collapse;
-    margin: 20px auto;
-  }
+  width: 80%;
+  border-collapse: collapse;
+  margin: 20px auto;
+}
   
-  .shop-table th,
-  .shop-table td {
-    padding: 8px;
-    border: 1px solid #ccc;
-  }
+.shop-table th,
+.shop-table td {
+  padding: 8px;
+  border: 1px solid #ccc;
+}
   
-  .shop-table th {
-    background-color: #f2f2f2;
-    font-weight: bold;
-  }
+.shop-table th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
   
-  .shop-table td {
-    text-align: center;
-  }
+.shop-table td {
+  text-align: center;
+}
 
-  .shop_link{
-    float: left;
-  }
+.shop_link{
+  float: left;
+}
 
-  .shop-search-form{
-    margin-right: 0;
-    margin-left: auto;
-    margin-bottom: 30px;
-  }
+.shop-search-form{
+  margin-right: 0;
+  margin-left: auto;
+  margin-bottom: 30px;
+}
+
+//入力欄のスタイル
+.shop_form{
+  width: 50%;
+  margin: 0 auto;
+}
+
+.shop_input {
+  display: flex;
+  align-items: center;
+  margin: 10px auto;
+}
+
+.shop_input label {
+  width: 100px; /* ラベルの幅を固定値に設定（調整可能） */
+}
+
+//編集ページのスタイル
+.form_row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.form_row label {
+  width: 100px; /* ラベルの幅を固定値に設定（調整可能） */
+}
+
+.tag_row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.tag_row label {
+  width: 100px; /* ラベルの幅を固定値に設定（調整可能） */
+}

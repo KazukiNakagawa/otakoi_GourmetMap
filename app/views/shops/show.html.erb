@@ -37,6 +37,7 @@
         <span class="tag"><%= tag.name %></span>
       <% end %>
     </div>
+    <p>投稿者: <%= @shop.user.name if @shop.user %></p>
     <%= link_to 'レビューページへ', reviews_shop_path(@shop) %>
     <%= link_to "一覧に戻る", shops_path %>
   </div>
