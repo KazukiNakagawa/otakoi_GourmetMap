@@ -18,7 +18,27 @@ a{
     border:solid 1px black;
 }
 
-//詳細ページ
+/* ユーザーの登録フォーム */
+.user_form{
+  width: 50%;
+  margin: 0 auto;
+}
+
+.user_input {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.user_input label {
+  width: 100px; /* ラベルの幅を固定値に設定（調整可能） */
+}
+
+.submit_btn {
+  margin-top: 20px; /* sign upボタンの上に余白を追加（調整可能） */
+}
+
+/* 店の詳細ページ */
 .top_image img{
     width: 60%;
     height: 109px;
@@ -72,7 +92,7 @@ a{
   margin-right: 80px;
 }
 
-//管理ページの店一覧
+/* 管理ページの店一覧 */
 .shop-table {
   width: 80%;
   border-collapse: collapse;
@@ -104,7 +124,7 @@ a{
   margin-bottom: 30px;
 }
 
-//入力欄のスタイル
+/* 入力欄のスタイル */
 .shop_form{
   width: 50%;
   margin: 0 auto;
@@ -120,7 +140,7 @@ a{
   width: 100px; /* ラベルの幅を固定値に設定（調整可能） */
 }
 
-//編集ページのスタイル
+/* 編集ページのスタイル */
 .form_row {
   display: flex;
   align-items: center;

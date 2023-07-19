@@ -1,37 +1,39 @@
 <h1>sign up</h1>
 
-<%= form_with model: @user, url: users_path, local: true do |f| %>
-    <div class="field">
-        <%= f.label :name %>
-        <%= f.text_field :name %>
+<div class="user_form">
+  <%= form_with model: @user, url: users_path, local: true do |f| %>
+    <div class="user_input">
+      <%= f.label :name %>
+      <%= f.text_field :name %>
     </div>
 
-    <div class="field">
-        <%= f.label :email %>
-        <%= f.text_field :email %>
+    <div class="user_input">
+      <%= f.label :email %>
+      <%= f.text_field :email %>
     </div>
 
-    <div class="field">
-        <%= f.label :password %>
-        <%= f.password_field :password %>
+    <div class="user_input">
+      <%= f.label :password %>
+      <%= f.password_field :password %>
     </div>
 
-    <div class="field">
-        <%= f.label :password_confirmation %>
-        <%= f.password_field :password_confirmation %>
+    <div class="user_input">
+      <%= f.label :password_confirmation %>
+      <%= f.password_field :password_confirmation %>
     </div>
 
-    <div class="field">
-        <%= f.label :hobby %>
-        <%= f.text_field :hobby %>
+    <div class="user_input">
+      <%= f.label :hobby %>
+      <%= f.text_field :hobby %>
     </div>
 
-    <div class="field">
-        <%= f.label :profile %>
-        <%= f.text_field :profile %>
+    <div class="user_input">
+      <%= f.label :profile %>
+      <%= f.text_field :profile %>
     </div>
 
-    <div>
-        <%= f.submit "sign up" %>
+    <div class="submit_btn">
+      <%= f.submit "sign up" %>
     </div>
-<% end %>
+  <% end %>
+</div>
