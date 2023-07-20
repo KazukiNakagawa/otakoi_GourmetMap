@@ -7,10 +7,10 @@ class CommentsController < ApplicationController
 
       if @comment.save
         flash[:notice] = 'コメントが投稿されました。'
-        redirect_to @shop
+        redirect_to reviews_shop_path(@shop)
       else
         flash[:alert] = @comment.errors.full_messages.map { |msg| msg.gsub(/Content|Rate/, '') }.join(', ')
-        redirect_to @shop
+        redirect_to reviews_shop_path(@shop)
       end
     end 
     

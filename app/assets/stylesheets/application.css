@@ -75,7 +75,7 @@ body{
     color: gold;
   }
 
-  .btn-danger {
+  .btn-delete {
     background-color: #dddddd; /* 赤色の背景 */
     color: #000000; /* 白色の文字 */
     border-radius: 5px; /* ボタンの角を丸くする */
@@ -83,7 +83,7 @@ body{
     text-decoration: none; /* ボタン内のリンクを下線なしにする */
   }
   
-  .btn-danger:hover {
+  .btn-delete:hover {
     background-color: #424242; /* ホバー時の背景色 */
     color: #ffff;
   }
