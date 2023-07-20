@@ -74,5 +74,18 @@ body{
   .bookmark-btn i.bookmarked {
     color: gold;
   }
+
+  .btn-danger {
+    background-color: #dddddd; /* 赤色の背景 */
+    color: #000000; /* 白色の文字 */
+    border-radius: 5px; /* ボタンの角を丸くする */
+    font-size: 16px; /* ボタンの文字サイズ */
+    text-decoration: none; /* ボタン内のリンクを下線なしにする */
+  }
+  
+  .btn-danger:hover {
+    background-color: #424242; /* ホバー時の背景色 */
+    color: #ffff;
+  }
   
  

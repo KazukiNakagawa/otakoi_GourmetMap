@@ -2,7 +2,7 @@
 
 <h1>ユーザー一覧</h1>
 <p class="shop_link"><%= link_to 'お店一覧はこちら', admin_shops_path %></p>
-<%= form_tag admin_users_path, method: :get, class: 'user-search-form' do %>
+<%= form_tag admin_users_path, method: :get, class: 'shop-search-form' do %>
   <%= text_field_tag :search, params[:search], placeholder: 'ユーザー名を入力してください' %>
   <%= submit_tag '検索' %>
 <% end %>

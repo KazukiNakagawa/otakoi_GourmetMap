@@ -8,7 +8,7 @@ a{
 
 .shop-list{
     width: 95%;
-    margin: 0 0 0 -50px;
+    margin: 10px 0 0 -50px;
 }
 
 .shop-tile{
@@ -16,26 +16,6 @@ a{
     margin: 0 20px 20px 0;
     float: right;
     border:solid 1px black;
-}
-
-/* ユーザーの登録フォーム */
-.user_form{
-  width: 50%;
-  margin: 0 auto;
-}
-
-.user_input {
-  display: flex;
-  align-items: center;
-  margin-bottom: 10px;
-}
-
-.user_input label {
-  width: 100px; /* ラベルの幅を固定値に設定（調整可能） */
-}
-
-.submit_btn {
-  margin-top: 20px; /* sign upボタンの上に余白を追加（調整可能） */
 }
 
 /* 店の詳細ページ */
@@ -116,12 +96,6 @@ a{
 
 .shop_link{
   float: left;
-}
-
-.shop-search-form{
-  margin-right: 0;
-  margin-left: auto;
-  margin-bottom: 30px;
 }
 
 /* 入力欄のスタイル */
