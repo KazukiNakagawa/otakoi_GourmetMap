@@ -34,7 +34,8 @@
     <p><a href="<%= @shop.url %>"><%= @shop.url %></a></p>
     <div class="tags">
       <% @tags.each do |tag| %>
-        <span class="tag"><%= tag.name %></span>
+        <% hashtag_name = tag.name.gsub("#", "") %>
+        <span class="tag"><%= link_to "##{tag.name}", hashtag_path(tag.name) %></span>
       <% end %>
     </div>
     <p>投稿者: <%= @shop.user.name if @shop.user %></p>

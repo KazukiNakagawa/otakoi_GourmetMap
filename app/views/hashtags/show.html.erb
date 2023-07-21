@@ -1,0 +1,52 @@
+<h1>ハッシュタグ: <%= @tag %></h1>
+
+<div class="shop-list">
+  <% @shops.each do |shop| %>
+    <div class="shop-tile">
+      <h2><%= shop.name %></h2>
+      <div class="top_image">
+        <% if shop.image.attached? %>
+          <%= image_tag url_for(shop.image) %>
+        <% else %>
+          <p>No image available</p>
+        <% end %>
+      </div>
+      <% text = shop.explantory_text %>
+      <% limit = 30 %>
+  
+      <% if text.length > limit %>
+        <% truncated_text = text[0...limit] + "..." %>
+      <% else %>
+        <% truncated_text = text %>
+      <% end %>
+  
+      <p class="list_text"><%= truncated_text %></p>
+      <div class="tags">
+        <%= shop.tags.pluck(:name).join(', ') %>
+      </div>
+      <%= link_to "詳細", shop_path(shop) %>
+      <div class="bookmark_btn">
+        <% if current_user.bookmarks.exists?(shop_id: shop.id) %>
+          <%= link_to delete_bookmark_shop_path(shop), method: :delete, class: "bookmark-btn" do %>
+            <i class="fas fa-star bookmarked"></i>
+          <% end %>
+        <% else %>
+          <%= link_to bookmark_shop_path(shop), method: :post, class: "bookmark-btn" do %>
+            <i class="far fa-star"></i>
+          <% end %>
+        <% end %>
+      </div>
+      <div class="like-btn">
+        <% if current_user.likes.exists?(shop_id: shop.id) %>
+          <%= link_to delete_like_shop_path(shop), method: :delete, class: "unlike-link" do %>
+            <i class="fas fa-heart liked"></i> いいね解除
+          <% end %>
+        <% else %>
+          <%= link_to create_like_shop_path(shop), method: :post, class: "like-link" do %>
+            <i class="far fa-heart"></i> いいね
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+  <% end %>
+</div>
