@@ -1,12 +1,12 @@
 <div class="header">   
   <nav class="nav-menu">
     <ul>
-      <li><%= link_to 'ホーム', root_path %></li>
-      <li><%= link_to 'プロフィール', user_path(current_user) %></li>
+      <li><%= link_to (t 'defaults.home'), root_path %></li>
+      <li><%= link_to (t 'defaults.profile'), user_path(current_user) %></li>
       <li><%= link_to 'ショップ一覧', shops_path %></li>
       <li><%= link_to 'ブックマーク一覧', bookmarks_path %></li>
       <li><%= link_to 'いいね！をしたお店一覧', likes_path %></li>
-      <li><%= link_to 'ログアウト', logout_path, method: :delete %></li>
+      <li><%= link_to (t 'defaults.logout'), logout_path, method: :delete %></li>
     </ul>
   </nav>
 </div>

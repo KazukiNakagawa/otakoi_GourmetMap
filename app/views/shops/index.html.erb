@@ -1,5 +1,5 @@
 <%= link_to '新規作成', new_shop_path %>
-<h1>Shop List</h1>
+<h1><%= t '.title' %></h1>
 
 <div class="shop-list">
   <%= form_tag shops_path, method: :get, class: 'shop-search-form' do %>

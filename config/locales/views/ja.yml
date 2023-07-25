@@ -1,0 +1,24 @@
+ja:
+  defaults:
+    login: 'ログイン'
+    logout: 'ログアウト'
+    home: 'ホーム'
+    profile: 'プロフィール'
+    signup: '登録'
+  users:
+    new:
+      title: 'ユーザー登録'
+    show:
+      title: 'プロフィール'
+  sessions:
+    new:
+      title: 'ログイン'
+      email: 'メールアドレス'
+  shops:
+    index:
+      title: 'お店一覧'
+    new:
+      title: '新規お店作成'
+  bookmarks:
+    index:
+      title: 'ブックマーク一覧'
