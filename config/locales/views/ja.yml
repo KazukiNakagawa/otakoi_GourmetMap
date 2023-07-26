@@ -5,6 +5,8 @@ ja:
     home: 'ホーム'
     profile: 'プロフィール'
     signup: '登録'
+    comment: 'コメント'
+    shop: 'お店'
   users:
     new:
       title: 'ユーザー登録'
@@ -19,6 +21,11 @@ ja:
       title: 'お店一覧'
     new:
       title: '新規お店作成'
+    show:
+      title: 'お店詳細'
   bookmarks:
     index:
       title: 'ブックマーク一覧'
+  likes:
+    index:
+      title: 'いいね！一覧'

@@ -47,6 +47,7 @@ class ShopsController < ApplicationController
       if @shop.update(shop_params)
         redirect_to @shop, notice: '店の情報が更新されました。'
       else
+        flash[:alert] = @shop.errors.full_messages.join(", ")
         render :edit
       end
     end

@@ -1,5 +1,11 @@
 <h3>編集ページ<h3>
 
+<% if flash[:alert].present? %>
+  <div class="alert alert-danger">
+    <%= flash[:alert] %>
+  </div>
+<% end %>
+
 <div class="shop_form">
   <%= form_with(model: @shop, url: shop_path(@shop), method: :patch) do |form| %>
     <div class="form_row">

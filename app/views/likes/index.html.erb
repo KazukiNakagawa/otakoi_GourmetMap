@@ -1,3 +1,4 @@
+<% content_for(:title, t('.title')) %>
 <h1>いいね!したお店一覧ページ</h1>
 <%= form_tag bookmarks_path, method: :get, class: 'shop-search-form' do %>
     <%= text_field_tag :search, params[:search], placeholder: '店名を入力してください' %>
