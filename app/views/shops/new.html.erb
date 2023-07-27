@@ -1,7 +1,5 @@
 <% content_for(:title, t('.title')) %>
-
 <h1><%= t '.title' %></h1>
-
 <div class="shop_form">
   <%= form_with(model: @shop, url: shops_path, local: true) do |form| %>
     <div class="shop_input">

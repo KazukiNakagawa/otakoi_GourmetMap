@@ -1,3 +1,4 @@
+<% provide(:title, @shop.name) %>
 <h1><%= @shop.name %></h1>
 <div class="btn_list">
   <% if current_user && current_user == @shop.user %>

@@ -21,8 +21,8 @@ ja:
       title: 'お店一覧'
     new:
       title: '新規お店作成'
-    show:
-      title: 'お店詳細'
+    edit:
+      title: 'お店編集'
   bookmarks:
     index:
       title: 'ブックマーク一覧'
