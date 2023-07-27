@@ -33,6 +33,7 @@ gem 'acts-as-taggable-on'
 gem 'font-awesome-sass'
 gem 'carrierwave'
 gem 'jquery-rails'
+gem 'select2-rails'
 gem 'rails-i18n'
 
 group :development, :test do
