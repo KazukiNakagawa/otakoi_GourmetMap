@@ -35,14 +35,12 @@ gem 'jquery-rails'
 gem 'select2-rails'
 gem 'rails-i18n'
 gem 'google-cloud-storage'
-gem 'fog-google'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'nokogiri'
   gem 'mechanize'
-  gem 'carrierwave'
   gem 'mini_magick'
   gem 'devise'
   gem 'sqlite3', '~> 1.4'
