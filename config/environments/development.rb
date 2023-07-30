@@ -31,7 +31,11 @@ Rails.application.configure do
   end
 
   # Store uploaded files on the local file system (see config/storage.yml for options).
-  config.active_storage.service = :local
+  config.active_storage.service = :google
+  config.google_cloud_storage = {
+    project_id: 'gourmetmap-394108',
+    keyfile: '53957a3c7833bf9baf4362e90ff04542761a1a48'
+  }
 
   # Don't care if the mailer can't send.
   config.action_mailer.raise_delivery_errors = false
