@@ -36,7 +36,6 @@ gem 'jquery-rails'
 gem 'select2-rails'
 gem 'rails-i18n'
 gem 'google-cloud-storage'
-gem 'fog-google'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
