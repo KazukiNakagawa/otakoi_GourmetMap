@@ -89,4 +89,9 @@ body{
     color: #ffff;
   }
   
+  .pagination-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0 20px 20%; /* 必要に応じて適切なマージンを指定してください */
+  }
  
