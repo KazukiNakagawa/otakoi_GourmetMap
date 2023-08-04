@@ -95,11 +95,4 @@ body{
     margin: 20px 0 20px 20%; /* 必要に応じて適切なマージンを指定してください */
   }
 
-  .custom-pagination .page-item.active .page-link {
-    display: inline-block;
-    padding: 5px;
-    border-radius: 50%;
-    background-color: #007bff; /* 好みの背景色を設定 */
-    color: #fff; /* 好みのテキスト色を設定 */
-  }
  
