@@ -9,8 +9,9 @@
   <% end %>
 
   <div class="pagination-container">
-    <%= paginate @shops %>
+    <%= paginate @shops, class: 'custom-pagination' %>
   </div>
+
 
   <% @shops.each do |shop| %>
     <div class="shop-tile">

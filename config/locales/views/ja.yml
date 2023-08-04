@@ -1,4 +1,18 @@
 ja:
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            name:
+              blank: "名前を入力して下さい。"
+            email:
+              blank: "メールアドレスを入力してください。"
+              taken: "このメールアドレスはすでに使用されています。"
+              invalid: "無効なメールアドレス形式です。"
+            password:
+              blank: "パスワードを入力して下さい。"
+              too_short: "パスワードは最低%{count}文字以上で入力してください。"
   defaults:
     login: 'ログイン'
     logout: 'ログアウト'

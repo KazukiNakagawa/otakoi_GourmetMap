@@ -6,16 +6,27 @@
     <div class="user_input">
       <%= f.label :name %>
       <%= f.text_field :name %>
+      <div class="error">
+        <%= @user.errors[:name].first %>
+      </div>
     </div>
 
     <div class="user_input">
       <%= f.label :email %>
       <%= f.text_field :email %>
+      <% if @user.errors.any? %>
+        <div class="error">
+          <%= @user.errors[:email].join(', ') %>
+        </div>
+      <% end %>
     </div>
 
     <div class="user_input">
       <%= f.label :password %>
       <%= f.password_field :password %>
+      <div class="error">
+        <%= @user.errors[:password].first %>
+      </div>
     </div>
 
     <div class="user_input">
