@@ -9,5 +9,4 @@ class User < ApplicationRecord
   has_many :likes
   validates :name, presence: true
   validates :email, presence: true, uniqueness: { case_sensitive: false }, format: { with: URI::MailTo::EMAIL_REGEXP }
-  validates :password, presence: true, length: { minimum: 8 }
 end

@@ -31,9 +31,10 @@
         <%= f.hidden_field :avatar_cache %><br>
         <%= image_tag @user.avatar.url, class: 'rounded-circle mt-3', id: 'preview', size: '200x200' %>
       </div>
-      <div>
+      <div class="user_btn">
         <%= f.submit "save" %>
       </div>
     <% end %>
   </div>
 </div>
+<%= link_to "詳細ページに戻る", user_path(current_user) %>
