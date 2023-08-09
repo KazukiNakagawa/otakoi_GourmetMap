@@ -98,8 +98,8 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
 
   config.google_cloud_storage = {
-  project_id: 'gourmetmap-394108',
-  keyfile: '53957a3c7833bf9baf4362e90ff04542761a1a48'
+  project_id: ,
+  keyfile: 
   }
 
   # Inserts middleware to perform automatic connection switching.
