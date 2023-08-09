@@ -21,17 +21,7 @@ google:
   #credentials: <%= Rails.root.join("path/to/gcs.keyfile") %>
   bucket: gourmet_map
   keyfile: {
-    "type": "service_account",
-    "project_id": "gourmetmap-394108",
-    "private_key_id": "53957a3c7833bf9baf4362e90ff04542761a1a48",
-    "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCxbYdlU0g51FQa\nymhzO9PDqr2z69IGZbPuBe2gC+zYXNqhjVTKnXFtRIayoLji3inLCewcEEXqaUc8\nFIRmm64RUGBhOFBfAzdYOO4L0rUBP4IRLJ8Sf+WBv7psF1VJcUlr+s9A8KcWXyrJ\nCQrVQw5jIaEk6zyHUd74rdKTWeRDShhERfG0d3s6TCmDvbWfEJo8vpzQWs9JzphK\najtVRFwDbBkm1uZPRNPdlarZN6j0G5MQA3kv0MbSxhXJ5jBAVSPNHqbdRIgpA8nA\nLwk8zS56vGotxapBlmyMVA64tpfyysUwqbJE31EDJXzs5Ovf2cXp/JZ3gaYdaLJz\nBmJ+bOk/AgMBAAECggEAJIsEie//PjnnIKVzodg+o1w1Oitl1H958Zoy+PW70Ew/\nk2qCfkCzLeghPgUwTzmmrfTbNmR7oe4RB+TJ6EBEN7iwQRXSJ9+HtJn1HWZGdX1Z\nEqR4Ft1UrcaJZN3haQD2OFEuApgOMeNj8of0PTxUaEJy6CGzE8PfAqT6a/Llup3e\nWwE/DoazVzzV/e2hxY3UI+l5QOv+UWxAnKP0ONI6Hm1+OElGfkUXpunPS4fu7xXG\n4A6ddaPu44ISa6j7ptQ9gSBlugfN3C0Ca4Qrd01oV87PRJKxXTc9RiuNi9hf0VWz\n89e/5yTvFt/8X2rGqTBDqTSr1pm1UMHcoo2f5MsYAQKBgQDVyypp1NecDNK7OfWM\n01GOoB5ydsp/1lRwkaKFKoDe256+UkguTINb+Xoy0el+HI+EWFSLN77QPAeQqxWq\nODDLNmbrHewJd+ONk+xIPsWZn78G2O742eqfnDQJHqJJAqLIsKZj9cxjLS10DIHA\nVtUjK9wn1oGYXSWHPmm9aqbrPwKBgQDUdHzJO+DtShJFiQVZP/niCzQTi6XLRU28\nlg/hA9ZcaHuZnHdgSKItILtsF7TW15wHBUNTslNY4UymnncrfiYpEpDpycknVf9z\nbd8DYey7j3vx9zluFAVFkk4AE0Wp50oP97FNftBa0RffnknxsLcC/C0oR5qqDt9E\nw3UJK7CCAQKBgGu+S82yGkbmn30DpKAoDz4Vq8J742mxljR08LazyOaHP+UiioXq\nwXikrdTWvRl1Q06rRVAz89H1rspVrkFuuAhxjkSHe+D5rpA3MCjomaTmQNsukKCR\nEhEGI6NE8Pxie68wd2qBAVQp/HIzq2BHYnqrK/RXwlALAVK7PYbcLOr5AoGAbE9y\nqpi3Q+HGTOLc8jI2b3Hsu6YvAOE1D1alg76UEwpFMPvetBxzaXRNeH7hd8H1znJ1\nb37zFNXPYQZalLa8N6Y6cKWpwj8Ke0thLXVH3hr5QlMaWS8lvOEomMs6cbLzRA6v\numVTTWlZtWwaIHhJ5OCxGN7gT6BDXOgUi3dVhgECgYBu+JJiezNjrkD8LZR9DFrP\n274rueFYsKFhddoyyZIiWG7sfk9bWizvfvPcSmYoT8dhmsYMDbikUJhCkdS9q1xs\nWeJm/ciTFJDMIHShuyQ6JFZ32dRlwbKGBvcVvtjXv53/gR0jd7n4NSWCx2rDzHB6\nKkt4CZNp/6uM6MNxnrFB2Q==\n-----END PRIVATE KEY-----\n",
-    "client_email": "gourmetmap@gourmetmap-394108.iam.gserviceaccount.com",
-    "client_id": "105070266612709832681",
-    "auth_uri": "https://accounts.google.com/o/oauth2/auth",
-    "token_uri": "https://oauth2.googleapis.com/token",
-    "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
-    "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/gourmetmap%40gourmetmap-394108.iam.gserviceaccount.com",
-    "universe_domain": "googleapis.com"
+
   }
 
 
