@@ -42,6 +42,10 @@ class UsersController < ApplicationController
     redirect_to request.referer
   end
 
+  def search
+    @users = User.where(role: params[:roles])
+  end
+
   private
   def user_params
     params.require(:user).permit(:name, :email, :password, :password_confirmation, :hobby, :profile, :avatar)

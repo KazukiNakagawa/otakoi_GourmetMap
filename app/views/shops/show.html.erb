@@ -1,5 +1,5 @@
+<% provide(:title, @shop.name) %>
 <h1><%= @shop.name %></h1>
-
 <div class="btn_list">
   <% if current_user && current_user == @shop.user %>
     <div class="edit_btn">
@@ -25,18 +25,20 @@
 <div class="shop-details">
   <div class="shop-image">
     <% if @shop.image.attached? %>
-      <%= image_tag url_for(@shop.image) %>
+      <%= image_tag rails_blob_url(@shop.image) %>
     <% end %>
   </div>
   <div class="shop-info">
     <p class="shop_text"><%= @shop.explantory_text %></p>
-    <p><%= @shop.address %></p>
+    <p>マップはこちら：<a class="map_link" href="<%= google_maps_link(@shop.address) %>" target="_blank"><%= @shop.address %></a></p>
     <p><a href="<%= @shop.url %>"><%= @shop.url %></a></p>
     <div class="tags">
       <% @tags.each do |tag| %>
-        <span class="tag"><%= tag.name %></span>
+        <% hashtag_name = tag.name.gsub("#", "") %>
+        <span class="tag"><%= link_to "##{tag.name}", hashtag_path(tag: tag.name) %></span>
       <% end %>
     </div>
+    <p>投稿者: <%= @shop.user.name if @shop.user %></p>
     <%= link_to 'レビューページへ', reviews_shop_path(@shop) %>
     <%= link_to "一覧に戻る", shops_path %>
   </div>

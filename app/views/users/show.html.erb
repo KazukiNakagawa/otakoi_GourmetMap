@@ -1,3 +1,5 @@
+<% content_for(:title, t('.title')) %>
+
 <div class="profile-container">
   <div class="profile-image">
     <%#= image_tag @user.profile_image %>
@@ -12,7 +14,7 @@
       <%= image_tag current_user.avatar.url, class: 'rounded-circle', size: '150x150' %>
     </div>
   </div>
-  
 </div>
+<%#= button_to '削除', user_path(current_user), method: :delete, data: { confirm: '本当に削除しますか？' }, class: 'btn btn-delete' %>
 <%= link_to 'プロフィールページの編集', edit_user_path(current_user) %>
 

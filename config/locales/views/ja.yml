@@ -1,0 +1,45 @@
+ja:
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            name:
+              blank: "名前を入力して下さい。"
+            email:
+              blank: "メールアドレスを入力してください。"
+              taken: "このメールアドレスはすでに使用されています。"
+              invalid: "無効なメールアドレス形式です。"
+            password:
+              blank: "パスワードを入力して下さい。"
+              too_short: "パスワードは最低%{count}文字以上で入力してください。"
+  defaults:
+    login: 'ログイン'
+    logout: 'ログアウト'
+    home: 'ホーム'
+    profile: 'プロフィール'
+    signup: '登録'
+    comment: 'コメント'
+    shop: 'お店'
+  users:
+    new:
+      title: 'ユーザー登録'
+    show:
+      title: 'プロフィール'
+  sessions:
+    new:
+      title: 'ログイン'
+      email: 'メールアドレス'
+  shops:
+    index:
+      title: 'お店一覧'
+    new:
+      title: '新規お店作成'
+    edit:
+      title: 'お店編集'
+  bookmarks:
+    index:
+      title: 'ブックマーク一覧'
+  likes:
+    index:
+      title: 'いいね！一覧'

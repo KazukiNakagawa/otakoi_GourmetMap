@@ -5,13 +5,13 @@ class ShopsController < ApplicationController
       if params[:tag]
         @tag = Tag.find_by(name: params[:tag])
         if @tag
-          @shops = @tag.shops.left_joins(:comments).group(:id).order(Arel.sql('AVG(comments.rate) DESC'))
+          @shops = @tag.shops.left_joins(:comments).group(:id).order(Arel.sql('AVG(comments.rate) DESC')).page(params[:page]).per(10)
         else
-          @shops = []
+          @shops = Kaminari.paginate_array([]).page(params[:page]).per(10)
         end
       else
-        @shops = Shop.left_joins(:comments).group(:id).order(Arel.sql('AVG(comments.rate) DESC'))
-      end
+        @shops = Shop.left_joins(:comments).group(:id).order(Arel.sql('AVG(comments.rate) DESC')).page(params[:page]).per(10)
+      end      
     end
   
     def show
@@ -47,6 +47,7 @@ class ShopsController < ApplicationController
       if @shop.update(shop_params)
         redirect_to @shop, notice: '店の情報が更新されました。'
       else
+        flash[:alert] = @shop.errors.full_messages.join(", ")
         render :edit
       end
     end

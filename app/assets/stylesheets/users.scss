@@ -44,7 +44,7 @@
 .user-table {
   width: 80%;
   border-collapse: collapse;
-  margin: 0 auto;
+  margin: 20px auto;
 }
 
 .user-table th,
@@ -65,6 +65,30 @@
 input[type="submit"]{
   width: 200px;
   text-align: center;
+  margin: 20px auto;
 }
 
+/* ユーザーの登録フォーム */
+.user_form{
+  width: 50%;
+  margin: 0 auto;
+}
+
+.user_input {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.user_input label {
+  width: 100px; /* ラベルの幅を固定値に設定（調整可能） */
+}
+
+.submit_btn {
+  margin-top: 20px; /* sign upボタンの上に余白を追加（調整可能） */
+}
+
+.user_btn{
+  margin-left: 30%;
+}
   

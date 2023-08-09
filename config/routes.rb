@@ -16,10 +16,12 @@ Rails.application.routes.draw do
   delete '/shops/:id', to: 'shops#destroy', as: 'destroy_shop'
   patch '/reviews/:id/rate' => 'reviews#rate', as: :rate_review
   resources :bookmarks, only: [:index]
+  resources :likes, only: [:index]
   resources :shops, only: [:index, :new, :create, :show, :edit, :update, :destroy] do
     member do
       get 'reviews'
       post 'bookmark'
+      get 'reviews'
       delete :bookmark, as: :delete_bookmark
       post 'like', to: 'likes#create', as: :create_like
       delete 'like', to: 'likes#destroy', as: :delete_like
@@ -28,5 +30,6 @@ Rails.application.routes.draw do
     resources :likes, only: [:create, :destroy]
     resources :tags, only: [:create, :destroy]
   end
+  get 'hashtags/:tag', to: 'hashtags#show', as: :hashtag
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

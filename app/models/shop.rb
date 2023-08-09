@@ -14,6 +14,7 @@ class Shop < ApplicationRecord
   has_many :users, through: :bookmarks
   accepts_nested_attributes_for :tags, allow_destroy: true
   has_many :likes, dependent: :destroy
+  has_one_attached :image
 
   # タグ名をカンマ区切りで受け取って関連付ける
   def tag_names=(names)

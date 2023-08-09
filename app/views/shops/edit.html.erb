@@ -1,42 +1,51 @@
+<% provide(:title, @shop.name) %>
 <h3>編集ページ<h3>
-<%= form_with(model: @shop, url: shop_path(@shop), method: :patch) do |form| %>
-  <div class="shop_input">
-    <%= form.label :name, "店名" %>
-    <%= form.text_field :name %>
+<% if flash[:alert].present? %>
+  <div class="alert alert-danger">
+    <%= flash[:alert] %>
   </div>
-
-  <div>
-    <%= form.label :explantory_text, "説明" %>
-    <%= form.text_area :explantory_text %>
-  </div>
-
-  <div class="shop_input">
-    <%= form.label :url, "店のURL" %>
-    <%= form.text_field :url %>
-  </div>
-
-  <div class="shop_input">
-    <%= form.label :address, "住所" %>
-    <%= form.text_field :address %>
-  </div>
-
-  <div class="shop_input">
-    <%= form.label :image, "画像" %>
-    <%= form.file_field :image %>
-  </div>
-
-  <%= form.fields_for :tags do |tag_form| %>
-    <div>
-      <%= tag_form.label :name, "タグ" %>
-      <%= tag_form.text_field :name %>
-      <%= tag_form.check_box :_destroy %>
-      <%= tag_form.label :_destroy, "削除" %>
-    </div>
-  <% end %>
-
-  <div>
-    <%= form.submit "更新" %>
-  </div>
-
-  <%= link_to "詳細ページに戻る", shop_path(@shop) %>
 <% end %>
+
+<div class="shop_form">
+  <%= form_with(model: @shop, url: shop_path(@shop), method: :patch) do |form| %>
+    <div class="form_row">
+      <%= form.label :name, "店名" %>
+      <%= form.text_field :name %>
+    </div>
+
+    <div class="form_row">
+      <%= form.label :explantory_text, "説明" %>
+      <%= form.text_area :explantory_text %>
+    </div>
+
+    <div class="form_row">
+      <%= form.label :url, "店のURL" %>
+      <%= form.text_field :url %>
+    </div>
+
+    <div class="form_row">
+      <%= form.label :address, "住所" %>
+      <%= form.text_field :address %>
+    </div>
+
+    <div class="form_row">
+      <%= form.label :image, "画像" %>
+      <%= form.file_field :image %>
+    </div>
+
+    <%= form.fields_for :tags do |tag_form| %>
+      <div class="tag_row">
+        <%= tag_form.label :name, "タグ" %>
+        <%= tag_form.text_field :name %>
+        <%= tag_form.check_box :_destroy %>
+        <%= tag_form.label :_destroy, "削除" %>
+      </div>
+    <% end %>
+
+    <div class="submit_btn">
+      <%= form.submit "更新" %>
+    </div>
+
+    <%= link_to "詳細ページに戻る", shop_path(@shop) %>
+  <% end %>
+</div>

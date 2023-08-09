@@ -12,9 +12,9 @@
  *
  *= require_tree .
  *= require_self
+ *= require select2/dist/css/select2
  */
-@import "font-awesome-sprockets";
-@import "font-awesome";
+
 
 body{
   margin: 0;
@@ -75,5 +75,24 @@ body{
   .bookmark-btn i.bookmarked {
     color: gold;
   }
+
+  .btn-delete {
+    background-color: #dddddd; /* 赤色の背景 */
+    color: #000000; /* 白色の文字 */
+    border-radius: 5px; /* ボタンの角を丸くする */
+    font-size: 16px; /* ボタンの文字サイズ */
+    text-decoration: none; /* ボタン内のリンクを下線なしにする */
+  }
   
+  .btn-delete:hover {
+    background-color: #424242; /* ホバー時の背景色 */
+    color: #ffff;
+  }
+  
+  .pagination-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0 20px; /* 必要に応じて適切なマージンを指定してください */
+  }
+
  
